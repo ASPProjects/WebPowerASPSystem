@@ -1,0 +1,10 @@
+* { margin: 0; padding: 0; font-size: 12px; color: #585858; }
+a { text-decoration: none; color: #515151; }
+a img { border: none; }
+li { list-style: none; }
+
+/* wrapper 类 */
+.wp { margin: 0 auto; }
+/*ie8 浮动兼容*/
+.cl:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.cl { zoom: 1; }

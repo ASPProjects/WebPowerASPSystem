@@ -1,0 +1,67 @@
+.wp { width: 1010px; }
+#header { height: 125px; background: url(../image/bg_header.jpg); }
+#logo { background: url(../image/logo.jpg) no-repeat; width: 216px; height: 86px; float: left; margin-left: 30px; }
+#intro { float: left; width: 400px; margin: 18px 10px 0; position: relative; }
+#intro span { display: block; line-height: 18px; }
+.light { position: absolute; top: 1px; left: 1px; }
+.light span { color: #FFFFFF; }
+.front { position: absolute; top: 0; left: 0; }
+#fav { float: right; margin: 14px 20px; }
+#nav { overflow: hidden; clear: both; height: 39px; }
+#nav a { display: block; float: left; height: 39px; text-align: center; line-height: 39px; width: 110px; background: url(../image/nav_spliter.jpg) no-repeat left top; }
+#banner img { margin-left: -206px; vertical-align: middle; }
+#ctTop { height: 30px; width: 1024px; margin-top: -30px; background: url(../image/bg_ct.png); position: relative; }
+#ct { width: 1024px; background: url(../image/bg_ct_body.png); }
+#news { float: left; width: 249px; height: 211px; margin: 10px 0 0 25px; }
+#shows { float: left; background: url(../image/shows.jpg); width: 472px; height: 202px; margin: 10px 0 0 7px; position: relative; }
+#more { position: absolute; top: 3px; right: 9px; overflow: hidden; text-indent: -999px; display: block; width: 28px; height: 17px; }
+#links { float: right; background: url(../image/links.jpg); margin: 10px 20px 0 0; width: 241px; height: 198px; }
+#links a { display: block; overflow: hidden; text-indent: -999px; height: 88px; margin: 5px 5px 12px; }
+#ctBottom { height: 25px; width: 1024px; background: url(../image/bg_ct.png) no-repeat center bottom; }
+#footer { background: url(../image/bg_footer.jpg) no-repeat center top; text-align: center; line-height: 20px; padding-bottom: 20px; }
+.links { padding-top: 36px; }
+.links a { margin: 0 6px; }
+#footer span { margin: 0 20px; }
+
+#sd { float: left; width: 260px; margin: 10px 0 0 20px; }
+#mn { float: right; width: 700px; margin: 10px 25px 0 0; }
+span.tit { display: block; font-size: 18px; border-bottom: 1px solid #8B4513; text-indent: 1em; width: 210px; }
+
+#aboutus { margin: 15px; }
+#aboutus p { text-indent: 2em; line-height: 22px; }
+#news ul { margin: 7px 10px 0 5px; }
+#news li, #chanpin-neirong li { background: url(../image/news_sticker.jpg) no-repeat 4px; height: 26px; line-height: 26px; padding-left: 16px; border-bottom: 1px dotted #999999; }
+#news li a { float: left; }
+#chanpin-neirong { width: 200px; margin-top: 10px; }
+#news li span { float: right; color: #818181; }
+.switch span { display: block; float: left; text-align: center; cursor: pointer; background-position: right; }
+.switch span.act { cursor: default; background-position: left; }
+#news .switch { height: 26px; border-bottom: 1px solid #AF4603; }
+#news .switch span { width: 79px; height: 26px; line-height: 26px; background-image: url(../image/bg_news_cate.jpg); }
+#news .switch span.act { width: 81px; color: #FFFFFF; font-weight: bold; }
+#shows .switch { height: 34px; margin: 0 100px 0 15px; }
+#shows .switch span { height: 34px; width: 151px; line-height: 28px; background-image: url(../image/bg_shows_cate.jpg); }
+#shows .switch span.act { width: 141px; color: #FFFFFF; }
+#shows ul { margin: 20px 10px; }
+#shows li { float: left; margin: 0 5px; }
+#shows li { text-align: center; }
+#shows li a div { border: 1px solid #E0E0E0; width: 100px; height: 90px; text-align: center; margin-bottom: 12px; }
+#shows li a:hover div { border-color: #AAAAAA; }
+#shows li a div img { margin-top: 9px; width: 94px; height: 71px; }
+
+ul.cpzs { }
+ul.cpzs li { float: left; margin: 0 11px; text-align: center; }
+ul.cpzs li a { display: block; text-align: center; width: 188px; height: 152px; border: 1px solid #D9D9D9; padding: 5px; }
+ul.cpzs li a:hover { border: 1px solid #1D83A6; color: #1D83A6; }
+ul.cpzs li a.name { display: inline; height: 30px; border: none; line-height: 30px; padding: 0; color: #575656; }
+div.yema { clear: both; height: 32px; line-height: 32px; text-align: center; margin-top: 10px; }
+div.yema a:link { color: #333333; padding: 0 3px; }
+div.yema a:hover { color: #2487AA; }
+/*留言板*/
+#lybg { height: 387px; border: #E4E4E4 1px solid; border-bottom: none; margin-top: 20px }
+.hengxian { border: #E4E4E4 1px solid; border-top: none; border-left: none; border-right: none; float: left }
+.hx-left { width: 140px; float: left; font-size: 12px; color: #434343; line-height: 30px; text-align: center; border-right: #E4E4E4 1px solid; background: #F7F7F7; }
+.hx-right { width: 526px; float: left; background: #FFFFFF; }
+#lylb { width: 700px; float: left; margin-top: 20px; border: #E4E4E4 1px solid; margin-left: 10px; font-size: 12px; color: #434343; }
+#ko { width: 700px; float: left; height: 20px }
+#gdkx { width: 700px; float: left; height: 10px }

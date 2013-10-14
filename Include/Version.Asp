@@ -1,0 +1,1 @@
+﻿<%Const Str_Soft_Version = "专业版 V2011 免费开源正式版"%>

@@ -1,0 +1,201 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language=javascript src="dialog.js"></script>
+<script language="javascript">
+document.write ("<link href='../language/zh-cn.css' type='text/css' rel='stylesheet'>");
+document.write ("<link href='../dialog/dialog.css' type='text/css' rel='stylesheet'>");
+var sAction = "INSERT";
+var sTitle = "上传图片";
+var oControl;
+var oSeletion;
+var sRangeType;
+var sFromUrl = "http://";
+var sAlt = "";
+var sBorder = "0";
+var sBorderColor = "";
+var sFilter = "";
+var sAlign = "";
+var sWidth = "";
+var sHeight = "";
+var sVSpace = "";
+var sHSpace = "";
+var sSLTUrl = "";
+var sCheckFlag = "file";
+document.write("<title>上传图片</title>");
+function InitDocument(){
+	d_fromurl.value = sFromUrl;
+}
+function RadioClick(what){
+	if (what=="url"){
+		d_checkfromfile.checked=false;
+		d_fromurl.disabled=false;
+		d_checkfromurl.checked=true;
+		d_file.myform.uploadfile.disabled=true;
+	}else{
+		d_checkfromurl.checked=false;
+		d_file.myform.uploadfile.disabled=false;
+		d_checkfromfile.checked=true;
+		d_fromurl.disabled=true;
+	}
+}
+function UploadLoaded(){
+	RadioClick(sCheckFlag);
+}
+function UploadError(sErrDesc){
+	AbleItems();
+	RadioClick('file');
+	divProcessing.style.display="none";
+	try {
+		BaseAlert(d_file.myform.uploadfile,eval(sErrDesc));
+	}
+	catch(e){}
+}
+function UploadSaved(sPathFileName, sPathFileName_s){
+	d_fromurl.value = sPathFileName;
+	sSLTUrl = sPathFileName_s;
+	ReturnValue();
+}
+function ReturnValue(){
+	sFromUrl = d_fromurl.value;
+	if (sFromUrl==""){
+	window.returnValue = null;}
+	else {
+	window.returnValue = sFromUrl;
+	}
+	window.close();
+}
+function ok(){
+	if (d_checkfromurl.checked){
+		ReturnValue();
+	}else{
+		if (!d_file.CheckUploadForm()) return false;
+		DisableItems();
+		divProcessing.style.display="";
+		d_file.myform.submit();
+	}
+}
+function DisableItems(){
+	d_checkfromfile.disabled=true;
+	d_checkfromurl.disabled=true;
+	d_fromurl.disabled=true;
+	Ok.disabled=true;
+}
+function AbleItems(){
+	d_checkfromfile.disabled=false;
+	d_checkfromurl.disabled=false;
+	d_fromurl.disabled=false;
+	Ok.disabled=false;
+}
+function doPreview(){
+	var url;
+	if (d_checkfromurl.checked){
+		url = d_fromurl.value;
+	}else{
+		url = d_file.document.myform.uploadfile.value;
+	}
+	if (url){
+		imgPreview.src = url;
+		setPreview()
+	}else{
+		tdPreview.innerHTML = "";
+	}
+}
+function setPreview(){
+	var width = imgPreview.width;
+	var height = imgPreview.height;
+	if (imgPreview.src){
+		var boxWidth = tdPreview.offsetWidth;
+		var boxHeight = tdPreview.offsetHeight;
+		if ((width>boxWidth)||(height>boxHeight)){
+			var nw = boxWidth/width;
+			var nh = boxHeight/height;
+			if (nw>nh){
+				height = boxHeight;
+				width = width*nh;
+			}else{
+				width = boxWidth;
+				height = height*nw;
+			}
+		}
+		tdPreview.innerHTML = "<img border=0 src='"+imgPreview.src+"' width='"+width+"' height='"+height+"'>";
+		tdPreviewSize.innerHTML = imgPreview.width+" * "+imgPreview.height;
+	}
+}
+</script>
+<style type="text/css">
+<!--
+body {
+	margin-left: 3px;
+	margin-top: 3px;
+	margin-right: 3px;
+	margin-bottom: 3px;
+}
+-->
+</style>
+
+<body onLoad="InitDocument()">
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="5">
+  <tr>
+    <td><table border="0" cellpadding="0" cellspacing="0" align="center" width="100%">
+        <tr>
+          <td><fieldset>
+            <legend><span lang="DlgImgSource">图片来源</span></legend>
+            <table border="0" cellpadding="5" cellspacing="0" width="100%">
+              <tr>
+                <td><table border="0" cellpadding="0" cellspacing="2" width="100%">
+                    <tr>
+                      <td noWrap width="12%"><input type="radio" id="d_checkfromfile" value="1" onClick="RadioClick('file')"><label for="d_checkfromfile"><span lang="DlgFromFile">上传</span></label>：</td>
+                      <td noWrap width="88%">
+<Script Language="JavaScript">
+document.write("<iframe id=d_file frameborder=0 src='../asp/upload.asp?type=image&style=coolblue&language=zh-cn' width='100%' height='22' scrolling=no></iframe>");
+</Script>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td noWrap><input type="radio" id="d_checkfromurl" value="1" onClick="RadioClick('url')"><label for="d_checkfromurl"><span lang="DlgFromUrl">网络</span></label>：</td>
+                      <td noWrap><input type=text id="d_fromurl" style="width:100%" size="30" value=""></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table>
+            </fieldset></td>
+        </tr>
+        <tr>
+          <td height="5"></td>
+        </tr>
+        <tr>
+          <td noWrap align="right" colspan="2"><input type="button" id="btnPreivew" lang="DlgImgPreview" onClick="doPreview()" value="预览">
+
+            <input type="submit" value='确定' id="Ok" onClick="ok()" lang="DlgBtnOK">
+
+            <input type="button" value="取消" onClick="window.close();" lang="DlgBtnCancel"></td>
+        </tr>
+        <tr>
+          <td><fieldset style="height:100%">
+            <legend><span lang="DlgImgPreview">预览</span></legend>
+            <table border="0" cellpadding="0" cellspacing="5" width="100%" height="200" valign="top">
+              <tr>
+                <td bgcolor="#FFFFFF" align="center" valign="middle" id="tdPreview" height="100%"></td>
+              </tr>
+              <tr>
+                <td align="center" id="tdPreviewSize"></td>
+              </tr>
+            </table>
+            </fieldset></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<div id="divProcessing" style="width:200px;height:30px;position:absolute;left:70px;top:100px;display:none">
+  <table border="0" cellpadding="0" cellspacing="1" bgcolor="#000000" width="100%" height="100%">
+    <tr>
+      <td bgcolor="#3A6EA5"><marquee align="middle" behavior="alternate" scrollamount="5">
+        <font color="#FFFFFF"><span lang="DlgComUploading"></span></font>
+        </marquee></td>
+    </tr>
+  </table>
+</div>
+<img id="imgPreview" src='' border="0" style="visibility:hidden" onload="setPreview()">
+</body>
+</html>
