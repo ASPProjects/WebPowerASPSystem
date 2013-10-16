@@ -1,6 +1,6 @@
 ﻿<!--#include file="Charset.Asp" -->
 <%
-Const SysRootDir = "/JieLanSi/"
+Const SysRootDir = "/MyWEB/GuFeng/"
 Const SiteDataPath = "Database/Qianbo.Qianbo"
 Const EnableStopInjection = True
 Const EnableSiteManageCode = True
