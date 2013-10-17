@@ -15,3 +15,4 @@
 <br>
 <span>地址：广东省佛山市顺德区大良德胜东路2号</span>    <span>版权所有：广东省佛山市景秀地坪工程有限公司</span>
 </div>
+<!--#include file="../../default/common/footer_common.asp"-->

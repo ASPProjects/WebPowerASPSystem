@@ -1,3 +1,4 @@
+<!--#include file="../../default/common/header_common.asp"-->
 <div id="header">
 <div class="wp cl">
 <div id="logo"></div>
