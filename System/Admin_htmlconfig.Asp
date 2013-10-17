@@ -10,8 +10,8 @@ Call SiteInfo()
 
 Function htmll(mulu, htmlmulu, FileName, filefrom, htmla, htmlb, htmlc, htmld)
     Call SiteInfo()
-    If mulu = "" Then mulu = ""&SysRootDir&""
-    If htmlmulu = "" Then htmlmulu = ""&SysRootDir&""
+    If mulu = "" Then mulu = "../"
+    If htmlmulu = "" Then htmlmulu = "../"
     mulu = Replace(mulu, "//", "/")
     FilePath = Server.MapPath(mulu)&"\"&FileName
     Do_Url = "http://"
