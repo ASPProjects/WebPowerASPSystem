@@ -495,7 +495,7 @@ End Function
 Sub FsoDelHtml(HTMLName)
     Dim Fso, FsoOut, File
     Set Fso = Server.CreateObject("Scripting.FileSystemObject")
-    Set FsoOut = Fso.GetFolder(Server.Mappath(SysRootDir))
+    Set FsoOut = Fso.GetFolder(Server.Mappath("../"))
     For Each File In FsoOut.Files
         If Right(File.Name, Len(File.Name) - InStrRev(File.Name, ".")) = HTMLName And HTMLName <> "asp" Then
             Response.Write "<span style=""color:red; padding-left: 18px"">" & File.Name & "</span> 成功删除…<br />"
