@@ -1,4 +1,5 @@
 <!--#include file="../../default/common/header_common.asp"-->
+<link rel="stylesheet" type="text/css" href="template/jielansi/css/main.css"/>
 <div id="header">
 <div class="wp cl">
 <div id="logo"></div>
