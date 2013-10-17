@@ -1,34 +1,106 @@
 <!--#include file="../part/header.asp"-->
-<div id="ct" class="wp cl">
-<div id="news">
-<div class="switch">
-<%=WebMenu(0,0,2)%>
-</div>
-<ul id="news_company">
-<%=News("1,")%>
-</ul>
-<ul id="news_Industry">
-<%=News("5,")%>
-</ul>
-</div>
-<div id="shows">
-<div class="switch">
-<span class="act">工程案例</span>
-<span>产品展示</span>
-</div>
-<a id="more" href="productlist.asp">more</a>
-<ul id="shows_case" class="cl">
-<!--#include file="../../../cpgundongcaifeng.asp"-->
-</ul>
-<ul id="shows_product" class="cl">
-<li><a href="#"><div><img src="static/image/case1.jpg"/></div><span>莆田九五医院报告2</span></a></li>
-<li><a href="#"><div><img src="static/image/case2.jpg"/></div><span>洗浴中心吊顶2</span></a></li>
-<li><a href="#"><div><img src="static/image/case3.jpg"/></div><span>湖南体育馆2</span></a></li>
-<li><a href="#"><div><img src="static/image/case4.jpg"/></div><span>报告厅2</span></a></li>
+<div id="ProductsClass">
+<span class="title">产品分类</span>
+<div class="splitline"></div>
+<ul>
+<li><a href="#">全自动攻牙机</a></li>
+<li><a href="#">自动钻孔机</a></li>
+<li><a href="#">全自动倒角机</a></li>
+<li><a href="#">全自动开槽机</a></li>
+<li><a href="#">自动开料机</a></li>
+<li><a href="#">钻孔攻牙组合机</a></li>
+<li><a href="#">多轴器</a></li>
+<li><a href="#">振动盘</a></li>
 </ul>
 </div>
-<script type="text/javascript" src="static/js/switch.js"></script>
-<!--#include file="../../../template/default/common/links.asp"-->
+<div id="ProductsShow">
+<span class="title">产品展示</span>
+<div class="splitline"></div>
+<ul class="cl">
+<li><a href="#"><img src="template/gufeng/image/product1.jpg"/><span>产品展示</span></a> </li>
+<li><a href="#"><img src="template/gufeng/image/product1.jpg"/><span>产品展示</span></a> </li>
+<li><a href="#"><img src="template/gufeng/image/product1.jpg"/><span>产品展示</span></a> </li>
+<li><a href="#"><img src="template/gufeng/image/product1.jpg"/><span>产品展示</span></a> </li>
+</ul>
+</div>
+<div id="AboutUs">
+<span class="title">关于我们</span>
+<div class="splitline"></div>
+<div id="youku">
+<img src="template/gufeng/image/tmp_youku.jpg"/>
+</div>
+<div class="intro">
+<p>固峰自动化设备固峰自动化设备固峰自动化设备固峰自动化设备固峰自动化设备固峰自动化设备固峰自动化设备
+固峰自动化设备固峰自动化设备固峰自动化设备固峰自动化设备固峰自动化设备固峰自动化设备固峰自动化设备固峰自动化设备
+固峰自动化设备固峰自动化设备固峰自动化设备固峰自动化设备。</p>
+<p>固峰自动化设备固峰自动化设备固峰自动化设备固峰自动化设备固峰自动化设备固峰自动化设备固峰自动化设备
+固峰自动化设备固峰自动化设备固峰自动化设备固峰自动化设备固峰自动化设备固峰自动化设备固峰自动化设备
+固峰自动化设备........</p>
+</div>
+</div>
+<div id="ContactUs">
+<ul class="Title">
+<li>联系人：</li>
+<li>手机：</li>
+<li>电话：</li>
+<li>传真：</li>
+<li>邮箱：</li>
+<li>网址：</li>
+<li>地址：</li>
+</ul>
+
+<ul class="Info">
+<li>先休息</li>
+<li>国会大厦</li>
+<li>都死光了</li>
+<li>开始大举反攻</li>
+<li>啊速度快</li>
+<li>上关键</li>
+<li> 啊我撒的感觉</li>
+</ul>
+</div>
+<div class="banner"></div>
+<div class="wp_spc"><div id="QRCode"></div></div>
+<div class="splitline" style="clear: left; margin:0 5px;"></div>
+<div id="Strength">
+<span class="title">实力展示</span>
+<div class="splitline"></div>
+<ul class="cl">
+<li><a href="#"><img src="template/gufeng/image/product_small1.jpg"/><span>钻孔机</span></a> </li>
+<li><a href="#"><img src="template/gufeng/image/product_small1.jpg"/><span>钻孔机</span></a> </li>
+<li><a href="#"><img src="template/gufeng/image/product_small1.jpg"/><span>钻孔机</span></a> </li>
+<li><a href="#"><img src="template/gufeng/image/product_small1.jpg"/><span>钻孔机</span></a> </li>
+<li><a href="#"><img src="template/gufeng/image/product_small1.jpg"/><span>钻孔机</span></a> </li>
+<li><a href="#"><img src="template/gufeng/image/product_small1.jpg"/><span>钻孔机</span></a> </li>
+</ul>
+</div>
+<div id="Success">
+<span class="title">成功案例</span>
+<div class="splitline"></div>
+<div id="Cases">
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
+</div>
+</div>
+<div id="News">
+<span class="title">公司新闻</span>
+<div class="splitline"></div>
+</div>
+<div id="Navs">
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
+<a href="#"></a>
 </div>
 <!--#include file="../part/footer.asp"-->
 <%

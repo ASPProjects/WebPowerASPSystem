@@ -1,18 +1,45 @@
-<div id="ctBottom" class="wp"></div>
-<div id="footer" class="wp">
+</div>
+<div id="footer">
+<div class="wp cl" style="padding-top: 80px;">
+<div id="Contact">
+<ul class="Title">
+<li>联系人：</li>
+<li>电  话：</li>
+<li>E-mail：</li>
+<li>地  址：</li>
+</ul>
+<ul class="Info">
+<li>先生</li>
+<li>0757-1111111</li>
+<li>541111111@qq.com</li>
+<li>固峰自动化固峰自动化固峰固峰自动化固峰自动化</li>
+</ul>
+<a class="ol" href="#">找到我们</a>
+</div>
+<div id="Messages">
+
+<a class="ol text" href="#">找到我们</a>
+<a class="ol bottom" href="#">找到我们</a>
+</div>
+<div id="Online">
+<a class="ol" href="#">客服联系</a>
+</div>
+
 <div class="links">
-<a href="index.asp">首页   </a>        |
+<a href="index.asp">首页   </a>   |
 <a href="aboutus.asp">关于我们</a>|
-<a href="productlist.asp">产品中心</a>|
-<a href="caselist.asp">工程案例</a>|
-<a href="newslist.asp">新闻资讯</a>|
-<a href="marnet.asp">销售网络</a>|
-<a href="hiring.asp">招聘信息</a>|
-<a href="feedback.asp">信息反馈</a>|
+<a href="product.asp">产品中心</a>|
+<a href="news.asp">新闻中心</a>|
+<a href="strength.asp">实力展示</a>|
+<a href="service.asp">服务支持</a>|
 <a href="contactus.asp">联系我们</a>
 </div>
-<span>电话：0757-27734773 传真：0757-27734775 邮箱：fsjingxiu@fsjingxiu.com</span>
+<span>主营产品：自动钻孔机 攻牙机 开槽机 钻孔机 倒角机</span>
 <br>
-<span>地址：广东省佛山市顺德区大良德胜东路2号</span>    <span>版权所有：广东省佛山市景秀地坪工程有限公司</span>
+<span>版权所有：固峰自动化设备厂</span>
+<br>
+<span>友情链接： 小型油压机 液体灌装机 选矿摇床 卧螺离心机 电脑雕刻机 气动打标机 塑料挤出机 力士乐 材料试验机 机械密封件 激光切割机 钻孔机 全自动沾锡机 成型机</span>
+
+</div>
 </div>
 <!--#include file="../../default/common/footer_common.asp"-->

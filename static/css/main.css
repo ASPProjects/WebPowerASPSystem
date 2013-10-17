@@ -1,4 +1,16 @@
 .wp { width: 1010px; }
+/* links that had overlay */
+.ol { display: block; overflow: hidden; text-indent: -999px; position: absolute; }
+/* contact, address, phone, fax and so on */
+ul.Title, ul.Info { float: left; }
+ul.Title li, ul.Info li { line-height: 20px; }
+ul.Title { width: 60px; }
+ul.Title li { float: right; }
+ul.Info { width: 200px; }
+
+/* Space Wrapper  */
+.wp_spc { overflow: visible; height: 1px; }
+
 #header { height: 125px; background: url(../image/bg_header.jpg); }
 #logo { background: url(../image/logo.jpg) no-repeat; width: 216px; height: 86px; float: left; margin-left: 30px; }
 #intro { float: left; width: 400px; margin: 18px 10px 0; position: relative; }
@@ -11,23 +23,19 @@
 #nav a { display: block; float: left; height: 39px; text-align: center; line-height: 39px; width: 110px; background: url(../image/nav_spliter.jpg) no-repeat left top; }
 #banner img { margin-left: -206px; vertical-align: middle; }
 #ctTop { height: 30px; width: 1024px; margin-top: -30px; background: url(../image/bg_ct.png); position: relative; }
-#ct { width: 1024px; background: url(../image/bg_ct_body.png); }
 #news { float: left; width: 249px; height: 211px; margin: 10px 0 0 25px; }
 #shows { float: left; background: url(../image/shows.jpg); width: 472px; height: 202px; margin: 10px 0 0 7px; position: relative; }
 #more { position: absolute; top: 3px; right: 9px; overflow: hidden; text-indent: -999px; display: block; width: 28px; height: 17px; }
 #links { float: right; background: url(../image/links.jpg); margin: 10px 20px 0 0; width: 241px; height: 198px; }
 #links a { display: block; overflow: hidden; text-indent: -999px; height: 88px; margin: 5px 5px 12px; }
 #ctBottom { height: 25px; width: 1024px; background: url(../image/bg_ct.png) no-repeat center bottom; }
-#footer { background: url(../image/bg_footer.jpg) no-repeat center top; text-align: center; line-height: 20px; padding-bottom: 20px; }
 .links { padding-top: 36px; }
 .links a { margin: 0 6px; }
-#footer span { margin: 0 20px; }
 
 #sd { float: left; width: 260px; margin: 10px 0 0 20px; }
 #mn { float: right; width: 700px; margin: 10px 25px 0 0; }
 span.tit { display: block; font-size: 18px; border-bottom: 1px solid #8B4513; text-indent: 1em; width: 210px; }
 
-#aboutus { margin: 15px; }
 #aboutus p { text-indent: 2em; line-height: 22px; }
 #news ul { margin: 7px 10px 0 5px; }
 #news li, #chanpin-neirong li { background: url(../image/news_sticker.jpg) no-repeat 4px; height: 26px; line-height: 26px; padding-left: 16px; border-bottom: 1px dotted #999999; }
