@@ -1,6 +1,6 @@
 ﻿<!--#include file="Charset.Asp" -->
 <%
-Const SysRootDir = "./"
+Const SysRootDir = "../"
 Const SiteDataPath = "Qianbo.Qianbo"
 Const EnableStopInjection = True
 Const EnableSiteManageCode = True
