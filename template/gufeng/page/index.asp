@@ -107,10 +107,10 @@
 </ul>
 </div>
 <div id="Navs">
-<a href="#"></a>
-<a href="#"></a>
-<a href="#"></a>
-<a href="#"></a>
+<a class="ol" href="#">公司实力</a>
+<a class="ol" href="#">资质证书</a>
+<a class="ol" href="#">在线留言</a>
+<a class="ol" href="#">联系我们</a>
 </div>
 <!--#include file="../part/footer.asp"-->
 <%

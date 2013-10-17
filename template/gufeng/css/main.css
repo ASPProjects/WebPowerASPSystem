@@ -6,7 +6,7 @@ body { background: #EAEAEA; }
 #nav { float: right; margin: 27px 13px 0 0; }
 #nav a { width: 80px; background: none; }
 #banner { float: right; width: 970px; height: 307px; margin: 4px 16px 30px; }
-#ct { margin-bottom: 10px; }
+#ct { }
 #ct * { color: #414141; }
 .title { display: block; overflow: hidden; text-indent: -999px; height: 38px; background-repeat: no-repeat; }
 .splitline { border-top: 1px solid #D8D8D8; border-bottom: 1px solid #F4F4F4; }
@@ -20,11 +20,12 @@ body { background: #EAEAEA; }
 #ContactUs { width: 235px; }
 #Strength { width: 990px; }
 #Strength .title { background-image: url(../image/title_strength.jpg); }
-#Success { width: 370px; }
+#Success { width: 350px; margin-top: 15px; }
 #Success .title { background-image: url(../image/title_success.jpg); }
-#News { width: 375px; }
+#News { width: 375px; margin-top: 15px; }
 #News .title { background-image: url(../image/title_news.jpg); }
-#Navs { width: 230px; height: 250px; background: url(../image/nav_btn.jpg) no-repeat center center; margin: 5px 0; }
+#Navs { width: 230px; height: 250px; background: url(../image/nav_btn.jpg) no-repeat center center; margin: 5px 10px; }
+#Navs a { position: relative; width: 230px; height: 54px; margin-top: 3px; margin-bottom: 10px; }
 
 #ProductsClass ul { margin: 10px; }
 #ProductsClass li { line-height: 22px; padding-left: 16px; background: url(../image/bg_list_sticker.jpg) no-repeat 5px center; }
@@ -41,7 +42,7 @@ body { background: #EAEAEA; }
 .wp_spc { float: right; margin-top: 85px; position: relative; width: 205px; margin-right: 20px; }
 #QRCode { background: url(../image/qrcode.jpg); width: 205px; height: 100px; position: absolute; bottom: 2px; }
 #Cases { width: 340px; height: 196px; background: url(../image/logo_cases.jpg); }
-#News ul{margin:10px;}
+#News ul { margin: 10px; }
 #News li { line-height: 22px; padding-left: 16px; background: url(../image/bg_list_sticker.jpg) no-repeat 5px center; }
 #News li span { float: right; color: #999999; }
 
