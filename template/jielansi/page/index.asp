@@ -1,3 +1,5 @@
+<!--#include file="../../default/common/header_common.asp"-->
+<!--#include file="../part/header.asp"-->
 <div id="ct" class="wp cl">
 <div id="news">
 <div class="switch">
@@ -29,7 +31,8 @@
 <script type="text/javascript" src="static/js/switch.js"></script>
 <!--#include file="../../../template/default/common/links.asp"-->
 </div>
-
+<!--#include file="../part/footer.asp"-->
+<!--#include file="../../default/common/footer_common.asp"-->
 <%
 Function WebMenu(ParentID, i, level)
     Dim rs, sql
