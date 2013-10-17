@@ -1,8 +1,3 @@
-<!--#include file="../../../Include/Const.Asp" -->
-<!--#include file="../../../Include/NoSQL.Asp" -->
-<!--#include file="../../../Include/ConnSiteData.Asp" -->
-<!--#include file="../../../dy.Asp" -->
-<!--#include file="../../../template/default/common/header_common.asp"-->
 <div id="ct" class="wp cl">
 <div id="news">
 <div class="switch">
@@ -34,7 +29,6 @@
 <script type="text/javascript" src="static/js/switch.js"></script>
 <!--#include file="../../../template/default/common/links.asp"-->
 </div>
-<!--#include file="../../../template/default/common/footer_common.asp"-->
 
 <%
 Function WebMenu(ParentID, i, level)
