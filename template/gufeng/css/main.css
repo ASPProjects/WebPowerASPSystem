@@ -41,6 +41,9 @@ body { background: #EAEAEA; }
 .wp_spc { float: right; margin-top: 85px; position: relative; width: 205px; margin-right: 20px; }
 #QRCode { background: url(../image/qrcode.jpg); width: 205px; height: 100px; position: absolute; bottom: 2px; }
 #Cases { width: 340px; height: 196px; background: url(../image/logo_cases.jpg); }
+#News ul{margin:10px;}
+#News li { line-height: 22px; padding-left: 16px; background: url(../image/bg_list_sticker.jpg) no-repeat 5px center; }
+#News li span { float: right; color: #999999; }
 
 #footer { background: url(../image/bg_footer.jpg) no-repeat center top; height: 365px; color: #FFFFFF; }
 #footer * { color: #FFFFFF; }
