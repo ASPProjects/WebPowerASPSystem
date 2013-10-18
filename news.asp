@@ -22,4 +22,4 @@ Else
     Set rs = Nothing
 End If
 %>
-<!--#include file="template/jielansi/page/news.asp"-->
+<!--#include file="template/gufeng/page/news.asp"-->

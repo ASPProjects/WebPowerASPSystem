@@ -27,4 +27,4 @@ End If
 rs.Close
 Set rs = Nothing
 %>
-<!--#include file="template/jielansi/page/contactus.asp"-->
+<!--#include file="template/gufeng/page/contactus.asp"-->
