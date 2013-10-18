@@ -9,4 +9,4 @@ Else
     SecretFlag = "<font color=""red"">会员功能，请先注册会员。</font>"
 End If
 %>
-<!--#include file="template/jielansi/page/feedback.asp"-->
+<!--#include file="template/gufeng/page/feedback.asp"-->
