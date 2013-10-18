@@ -1,12 +1,5 @@
 <!--#include file="./____Core.asp" -->
 <%
-If ISHTML = 1 Then
-    Response.expires = 0
-    Response.expiresabsolute = Now() - 1
-    Response.addHeader "pragma", "no-cache"
-    Response.addHeader "cache-control", "private"
-    Response.CacheControl = "no-cache"
-End If
 If request.QueryString("SortID") = "" Then
     SeoTitle = "产品展示"
 ElseIf Not IsNumeric(request.QueryString("SortID")) Then

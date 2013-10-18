@@ -9,10 +9,10 @@
 <li>地  址：</li>
 </ul>
 <ul class="Info">
-<li>先生</li>
-<li>0757-1111111</li>
-<li>541111111@qq.com</li>
-<li>固峰自动化固峰自动化固峰固峰自动化固峰自动化</li>
+<li>颜生</li>
+<li>0757-23330849</li>
+<li>64540657@qq.com</li>
+<li>广东省佛山市顺德区陈村镇石洲岗北工业区一号</li>
 </ul>
 <a class="ol" href="contactus.asp">找到我们</a>
 </div>
