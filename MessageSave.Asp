@@ -1,6 +1,4 @@
-﻿<!--#include file="Include/Const.Asp"-->
-<!--#include file="Include/NoSQL.Asp" -->
-<!--#include file="Include/ConnSiteData.Asp"-->
+﻿<!--#include file="./____Core.asp" -->
 <%
 If DateDiff("s", session("time"), Now())<Refresh Then
     response.Write "<script language='JavaScript'>alert('防刷新机制启动：请不要在 "&Refresh&" 秒内重复刷新！');" & "history.back()" & "</script>"

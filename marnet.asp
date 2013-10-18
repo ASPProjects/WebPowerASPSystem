@@ -1,7 +1,4 @@
-<!--#include file="Include/Const.Asp" -->
-<!--#include file="Include/NoSQL.Asp" -->
-<!--#include file="Include/ConnSiteData.Asp" -->
-<!--#include file="dy.Asp" -->
+<!--#include file="./____Core.asp" -->
 <!--#include file="template/default/common/header_common.asp"-->
 <div id="ct" class="wp cl">
 <!--#include file="template/default/common/sider.asp"-->
