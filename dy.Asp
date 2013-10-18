@@ -1,6 +1,5 @@
 <%
-						
-						Function News(SortPath)
+Function News(SortPath)
     Dim rs, sql, NewsName, NewFlag,AddTime
     Set rs = server.CreateObject("adodb.recordset")
         sql = "select top 6 * from Qianbo_News where ViewFlag and Instr(SortPath,'"&SortPath&"')>0 order by id desc"
@@ -12,7 +11,7 @@
         Do While Not rs.EOF
             If Now() - rs("AddTime")<= 2 Then
                 NewsName = StrLeft(rs("NewsName"), 30)
-				AddTime = StrLeft(rs("AddTime"), 8)
+                AddTime = StrLeft(rs("AddTime"), 8)
                 NewFlag = " <img src=""Images/new.gif"" align=""absmiddle"">"
             Else
                 NewsName = Mid(rs("NewsName"), 1, 10)
@@ -37,7 +36,7 @@
     Set rs = Nothing
 End Function
 
-						Function News2(SortPath)
+Function News2(SortPath)
     Dim rs, sql, NewsName, NewFlag,AddTime
     Set rs = server.CreateObject("adodb.recordset")
     sql = "select top 9 * from Qianbo_News where ViewFlag and Instr(SortPath,'"&SortPath&"')>0 order by id desc"
