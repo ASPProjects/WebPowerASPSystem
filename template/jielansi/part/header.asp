@@ -23,9 +23,9 @@
 <div id="nav" class="wp cl">
 <a href="index.asp">首页   </a>
 <a href="aboutus.asp">关于我们</a>
-<a href="productlist.asp">产品中心</a>
-<a href="caselist.asp">工程案例</a>
-<a href="newslist.asp">新闻资讯</a>
+<a href="product.asp">产品中心</a>
+<a href="case.asp">工程案例</a>
+<a href="news.asp">新闻资讯</a>
 <a href="marnet.asp">销售网络</a>
 <a href="hiring.asp">招聘信息</a>
 <a href="feedback.asp">信息反馈</a>

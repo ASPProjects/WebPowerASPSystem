@@ -1,18 +1,5 @@
 <!--#include file="../part/header.asp"-->
-<div id="ProductsClass">
-<span class="title">产品分类</span>
-<div class="splitline"></div>
-<ul>
-<li><a href="#">全自动攻牙机</a></li>
-<li><a href="#">自动钻孔机</a></li>
-<li><a href="#">全自动倒角机</a></li>
-<li><a href="#">全自动开槽机</a></li>
-<li><a href="#">自动开料机</a></li>
-<li><a href="#">钻孔攻牙组合机</a></li>
-<li><a href="#">多轴器</a></li>
-<li><a href="#">振动盘</a></li>
-</ul>
-</div>
+<!--#include file="../part/productsclass.asp"-->
 <div id="ProductsShow">
 <span class="title">产品展示</span>
 <div class="splitline"></div>
@@ -106,12 +93,7 @@
 <li><a href="#">使用及操作全自动攻牙机的技巧性</a><span>2013-01-10</span></li>
 </ul>
 </div>
-<div id="Navs">
-<a class="ol" href="strength.asp">公司实力</a>
-<a class="ol" href="">资质证书</a>
-<a class="ol" href="feedback.asp">在线留言</a>
-<a class="ol" href="contactus.asp">联系我们</a>
-</div>
+<!--#include file="../part/links.asp"-->
 <!--#include file="../part/footer.asp"-->
 <%
 Function WebMenu(ParentID, i, level)

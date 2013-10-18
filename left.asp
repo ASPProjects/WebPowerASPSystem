@@ -1,12 +1,5 @@
-   
-
-              <%Folder(1)%>
-
-                
-                
-                
-
 <%
+Folder(1)
   Function Folder(id)
     Dim rs, sql, i, ChildCount, FolderType, FolderName, onMouseUp, ListType
     Set rs = server.CreateObject("adodb.recordset")

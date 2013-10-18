@@ -31,7 +31,7 @@ ul.Info { width: 200px; }
 #ctBottom { height: 25px; width: 1024px; background: url(../image/bg_ct.png) no-repeat center bottom; }
 .links { padding-top: 36px; }
 .links a { margin: 0 6px; }
-
+/* keep default value to show how to modify it */
 #sd { float: left; width: 260px; margin: 10px 0 0 20px; }
 #mn { float: right; width: 700px; margin: 10px 25px 0 0; }
 span.tit { display: block; font-size: 18px; border-bottom: 1px solid #8B4513; text-indent: 1em; width: 210px; }
