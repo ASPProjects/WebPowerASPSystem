@@ -39,7 +39,7 @@ If ViewNoRight(rs("GroupID"), rs("Exclusive")) Then
 
 产品名称：<%=rs("ProductName")%><br />
 更新时间：<%=FormatDate(rs("Addtime"),13)%><br />
-出品单位：美国凯德防水涂料有限公司<br>
+出品单位：<%=rs("Maker")%><br>
 型号:<%=rs("ProductModel")%><br>
 规格:<%=rs("ProductNo")%>
 <br />
@@ -78,7 +78,7 @@ set rst6=conn.execute("select  top 1 *  from Qianbo_Products where ID >"& Reques
 
 if not rst6.EOF then
 
-Response.Write("<div style=""font-weight:900""></div>下一个产品：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<a style="" color:#460002"" href='ProductView.Asp?ID="&rst6.Fields("ID")&"&SortID=2'>"&rst6.Fields("Productname")&"</a><br>")
+Response.Write("<div style=""font-weight:900""></div>下一个产品：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<a style="" color:#460002"" href='Product.Asp?ID="&rst6.Fields("ID")&"&SortID=2'>"&rst6.Fields("Productname")&"</a><br>")
 
 end if
 
@@ -87,7 +87,7 @@ set rst7=conn.execute("select  top 1 *  from Qianbo_Products where id <"& Reques
 if not rst7.EOF then
 
 
-Response.Write(" 上一个产品：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<a style="" color:#460002"" href='ProductView.Asp?ID="&rst7.Fields("ID")&"&SortID=2'>"&rst7.Fields("Productname")&"</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
+Response.Write(" 上一个产品：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<a style="" color:#460002"" href='Product.Asp?ID="&rst7.Fields("ID")&"&SortID=2'>"&rst7.Fields("Productname")&"</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
 
 end if
 
