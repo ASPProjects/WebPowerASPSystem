@@ -6,24 +6,28 @@
 
 
 <div id="aboutus">
-<div style="width:300px; float:left; line-height:25px">
-<%
-Set rs = server.CreateObject("adodb.recordset")
-sql = "select * from Qianbo_Others where ViewFlag and ID=1"
-rs.Open sql, conn, 1, 3
-If rs.EOF Then
-Response.Write("<div class=""mm"">暂无相关信息</div>")
-Else
-If ViewNoRight(rs("GroupID"), rs("Exclusive")) Then
-Response.Write(rs("Content"))
-else
-Response.Write("<div class=""mm"" align=""center"">无查看权限</div>")
-End If
-rs.update
-End If
-rs.Close
-Set rs = Nothing
-%>
+<div style="width:250px; float:left; line-height:25px">
+<div id="ContactUs">
+<ul class="Title">
+<li>联系人：</li>
+<li>手机：</li>
+<li>电话：</li>
+<li>传真：</li>
+<li>邮箱：</li>
+<li>网址：</li>
+<li>地址：</li>
+</ul>
+
+<ul class="Info">
+<li>颜生</li>
+<li>15986139858 18676528240</li>
+<li>0757-23330849</li>
+<li>0757-23330849</li>
+<li>64540657@qq.com</li>
+<li>www.fsgfjx.com</li>
+<li>广东省佛山市顺德区陈村镇石洲岗北工业区一号</li>
+</ul>
+</div>
 </div>
 <br />
 <div style="width:445px; float:left;  overflow:hidden; margin-top:20px; margin-left:10px">

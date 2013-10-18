@@ -20,9 +20,9 @@ Function News(SortPath)
             If ISHTML = 1 Then
                 AutoLink = ""&NewName&""&Separated&""&rs("ID")&"."&HTMLName&""
             Else
-                AutoLink = "NewsView.Asp?ID="&rs("id")&""
+                AutoLink = "News.Asp?ID="&rs("id")&""
             End If
-            %><li><a href="<% =AutoLink%>" title="<% =NewsName%>"><% =NewsName%></A><span>[<% =left(rs("addtime"),10)%>]</span></li><%
+            %><li><a href="<% =AutoLink%>" title="<% =NewsName%>"><% =NewsName%></A><span><% =left(rs("addtime"),10)%></span></li><%
             rs.movenext
         Loop
     End If
@@ -52,7 +52,7 @@ Function News2(SortPath)
             If ISHTML = 1 Then
                 AutoLink = ""&NewName&""&Separated&""&rs("ID")&"."&HTMLName&""
             Else
-                AutoLink = "NewsView.Asp?ID="&rs("id")&""
+                AutoLink = "News.Asp?ID="&rs("id")&""
             End If
             %><li><a href="<% =AutoLink%>" title="<% =NewsName%>"><% =NewsName%></A></li><%
             rs.movenext

@@ -57,6 +57,7 @@ body { background: #EAEAEA; }
 #News li { line-height: 22px; padding-left: 16px; background: url(../image/bg_list_sticker.jpg) no-repeat 5px center; }
 #News li a { _display: inline; _float: left; }
 #News li span { float: right; color: #999999; }
+.mm p { text-indent: 2em; }
 
 #footer { background: url(../image/bg_footer.jpg) no-repeat center top; height: 365px; color: #FFFFFF; }
 #footer * { color: #FFFFFF; }

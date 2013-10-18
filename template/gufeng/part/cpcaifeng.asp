@@ -7,7 +7,7 @@
     Dim HideSort
     Set rs = server.CreateObject("adodb.recordset")
     If ID = "" Then 
-        SortPath = "0,1,2,"
+        SortPath = "0,1,"
     ElseIf Not IsNumeric(ID) Then
         response.Write "<center>暂无相关信息</center>"
         Exit Function

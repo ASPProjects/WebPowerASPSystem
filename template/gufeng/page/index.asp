@@ -4,12 +4,13 @@
 <span class="title">产品展示</span>
 <div class="splitline"></div>
 <a class="ol more" href="product.asp">more</a>
-<ul class="cl">
+<ul class="cl" style="display: none;">
 <li><a href="#"><img src="template/gufeng/image/product1.jpg"/><span>产品展示</span></a> </li>
 <li><a href="#"><img src="template/gufeng/image/product1.jpg"/><span>产品展示</span></a> </li>
 <li><a href="#"><img src="template/gufeng/image/product1.jpg"/><span>产品展示</span></a> </li>
 <li><a href="#"><img src="template/gufeng/image/product1.jpg"/><span>产品展示</span></a> </li>
 </ul>
+<!--#include file="../part/cpgundongcaifeng.asp"-->
 </div>
 <div id="AboutUs">
 <span class="title">关于我们</span>
@@ -63,20 +64,20 @@
 <div id="Success">
 <span class="title">成功案例</span>
 <div class="splitline"></div>
-<a class="ol more" href="#">more</a>
+<a class="ol more">more</a>
 <div id="Cases">
-<a class="ol" href="#"></a>
-<a class="ol" href="#"></a>
-<a class="ol" href="#"></a>
-<a class="ol" href="#"></a>
-<a class="ol" href="#"></a>
-<a class="ol" href="#"></a>
-<a class="ol" href="#"></a>
-<a class="ol" href="#"></a>
-<a class="ol" href="#"></a>
-<a class="ol" href="#"></a>
-<a class="ol" href="#"></a>
-<a class="ol" href="#"></a>
+<a class="ol"></a>
+<a class="ol"></a>
+<a class="ol"></a>
+<a class="ol"></a>
+<a class="ol"></a>
+<a class="ol"></a>
+<a class="ol"></a>
+<a class="ol"></a>
+<a class="ol"></a>
+<a class="ol"></a>
+<a class="ol"></a>
+<a class="ol"></a>
 </div>
 </div>
 <div id="News">
@@ -87,24 +88,10 @@
 </div>
 <a class="ol more" href="news.asp">more</a>
 <ul id="news_company" class="cl">
-<li><a href="#">三星手机螺母攻牙机</a><span>2013-04-02</span></li>
-<li><a href="#">最新苹果手机左右螺母全自动攻牙机我司研发</a><span>2013-04-02</span></li>
-<li><a href="#">使用全自动倒角机的安全注意事项</a><span>2013-01-17</span></li>
-<li><a href="#">全自动钻孔机与手动钻孔机的区别</a><span>2013-01-16</span></li>
-<li><a href="#">全自动钻孔机的操作方式及应用范围</a><span>2013-01-15</span></li>
-<li><a href="#">全自动攻牙机安装步骤和使用注意要点</a><span>2013-01-14</span></li>
-<li><a href="#">多轴器使用的六个基本步骤</a><span>2013-01-11</span></li>
-<li><a href="#">使用及操作全自动攻牙机的技巧性</a><span>2013-01-10</span></li>
+<%=News("5,")%>
 </ul>
 <ul id="news_Industry" class="cl">
-<li><a href="#">2三星手机螺母攻牙机</a><span>2013-04-02</span></li>
-<li><a href="#">2最新苹果手机左右螺母全自动攻牙机我司研发</a><span>2013-04-02</span></li>
-<li><a href="#">2使用全自动倒角机的安全注意事项</a><span>2013-01-17</span></li>
-<li><a href="#">2全自动钻孔机与手动钻孔机的区别</a><span>2013-01-16</span></li>
-<li><a href="#">2全自动钻孔机的操作方式及应用范围</a><span>2013-01-15</span></li>
-<li><a href="#">2全自动攻牙机安装步骤和使用注意要点</a><span>2013-01-14</span></li>
-<li><a href="#">2多轴器使用的六个基本步骤</a><span>2013-01-11</span></li>
-<li><a href="#">2使用及操作全自动攻牙机的技巧性</a><span>2013-01-10</span></li>
+<%=News("1,")%>
 </ul>
 </div>
 <script type="text/javascript" src="static/js/switch.js"></script>
