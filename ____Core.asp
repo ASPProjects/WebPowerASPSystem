@@ -5,4 +5,5 @@
 <%
 Dim SysRoot
 SysRoot = Server.MapPath("./")
+Call SiteInfo()
 %>

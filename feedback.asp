@@ -1,6 +1,5 @@
 <!--#include file="./____Core.asp" -->
 <%
-Call SiteInfo()
 Dim MesName, Content, SecretFlag, mMemID, mLinkman, mSex, mCompany, mAddress, mZipCode, mTelephone, mFax, mMobile, mEmail
 If session("MemName")<>"" And session("MemLogin") = "Succeed" Then
     Call MemInfo()

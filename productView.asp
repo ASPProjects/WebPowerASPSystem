@@ -1,6 +1,5 @@
 <!--#include file="./____Core.asp" -->
 <%
-Call SiteInfo()
 If ISHTML = 1 Then
 Response.expires = 0
 Response.expiresabsolute = Now() - 1
