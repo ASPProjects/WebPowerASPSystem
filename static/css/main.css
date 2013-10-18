@@ -5,7 +5,7 @@
 ul.Title, ul.Info { float: left; }
 ul.Title li, ul.Info li { line-height: 20px; }
 ul.Title { width: 60px; }
-ul.Title li { float: right; }
+ul.Title li { text-align: right; }
 ul.Info { width: 200px; }
 
 /* Space Wrapper  */
@@ -18,7 +18,7 @@ ul.Info { width: 200px; }
 .light { position: absolute; top: 1px; left: 1px; }
 .light span { color: #FFFFFF; }
 .front { position: absolute; top: 0; left: 0; }
-#fav { float: right; margin: 14px 20px; }
+#fav { float: right; margin: 14px 20px; _display: inline; }
 #nav { overflow: hidden; clear: both; height: 39px; }
 #nav a { display: block; float: left; height: 39px; text-align: center; line-height: 39px; width: 110px; background: url(../image/nav_spliter.jpg) no-repeat left top; }
 #banner img { margin-left: -206px; vertical-align: middle; }
