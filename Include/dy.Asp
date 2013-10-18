@@ -22,12 +22,7 @@ Function News(SortPath)
             Else
                 AutoLink = "NewsView.Asp?ID="&rs("id")&""
             End If
-			%>
-<li><a href="<% =AutoLink%>" title="<% =NewsName%>">
-  <% =NewsName%>
-  </A><span>[<% =left(rs("addtime"),10)%>]</span></li>
-<%
-           
+            %><li><a href="<% =AutoLink%>" title="<% =NewsName%>"><% =NewsName%></A><span>[<% =left(rs("addtime"),10)%>]</span></li><%
             rs.movenext
         Loop
     End If
@@ -48,7 +43,7 @@ Function News2(SortPath)
         Do While Not rs.EOF
             If Now() - rs("AddTime")<= 2 Then
                 NewsName = StrLeft(rs("NewsName"), 30)
-				AddTime = StrLeft(rs("AddTime"), 8)
+                AddTime = StrLeft(rs("AddTime"), 8)
                 NewFlag = " <img src=""Images/new.gif"" align=""absmiddle"">"
             Else
                 NewsName = Mid(rs("NewsName"), 1, 12)
@@ -59,12 +54,7 @@ Function News2(SortPath)
             Else
                 AutoLink = "NewsView.Asp?ID="&rs("id")&""
             End If
-			%>
-<li><a href="<% =AutoLink%>" title="<% =NewsName%>">
-  <% =NewsName%>
-  </A></li>
-<%
-           
+            %><li><a href="<% =AutoLink%>" title="<% =NewsName%>"><% =NewsName%></A></li><%
             rs.movenext
         Loop
     End If
