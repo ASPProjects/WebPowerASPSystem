@@ -18,8 +18,8 @@
 </div>
 <div id="Messages">
 
-<a class="ol text" href="#">找到我们</a>
-<a class="ol bottom" href="#">找到我们</a>
+<a class="ol text" href="feedback.asp">留言</a>
+<a class="ol bottom" href="feedback.asp">我要留言</a>
 </div>
 <div id="Online">
 <a class="ol" href="#">客服联系</a>

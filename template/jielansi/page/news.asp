@@ -2,9 +2,9 @@
 <div id="ct" class="wp cl">
 <!--#include file="../part/sider.asp"-->
 <div id="mn">
-<span class="tit">公司简介</span>
+<span class="tit">新闻中心</span>
 <div id="aboutus">
-<!--#include file="../../../gsjj.asp"-->
+<!--#include file="../part/xwcaifeng.Asp"-->
 </div>
 </div></div>
 <!--#include file="../part/footer.asp"-->

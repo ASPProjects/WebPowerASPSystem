@@ -5,8 +5,8 @@
 <%
 Call SiteInfo()
 If ISHTML = 1 Then
-    Response.expires = 0
-    Response.expiresabsolute = Now() - 1
+    Response.Expires = 0
+    Response.ExpiresAbsolute = Now() - 1
     Response.addHeader "pragma", "no-cache"
     Response.addHeader "cache-control", "private"
     Response.CacheControl = "no-cache"
@@ -26,13 +26,4 @@ Else
     Set rs = Nothing
 End If
 %>
-<!--#include file="template/default/common/header_common.asp"-->
-<div id="ct" class="wp cl">
-<!--#include file="template/default/common/sider.asp"-->
-<div id="mn">
-<span class="tit">新闻中心</span>
-<div id="aboutus">
-<!--#include file="xwcaifeng.Asp"-->
-</div>
-</div></div>
-<!--#include file="template/default/common/footer_common.asp"-->
+<!--#include file="template/jielansi/page/news.asp"-->

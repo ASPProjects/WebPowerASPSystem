@@ -26,15 +26,4 @@ Else
     Set rs = Nothing
 End If
 %>
-<!--#include file="template/default/common/header_common.asp"-->
-<div id="ct" class="wp cl">
-<!--#include file="template/default/common/sider.asp"-->
-<div id="mn">
-<span class="tit">产品中心</span>
-
-
-<div id="aboutus">
-<!--#include file="cpcaifeng.asp"-->
-</div>
-</div></div>
-<!--#include file="template/default/common/footer_common.asp"-->
+<!--#include file="template/jielansi/page/product.asp"-->
