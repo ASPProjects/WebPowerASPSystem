@@ -35,27 +35,9 @@ ul.Info { width: 200px; }
 #sd { float: left; width: 260px; margin: 10px 0 0 20px; }
 #mn { float: right; width: 700px; margin: 10px 25px 0 0; }
 span.tit { display: block; font-size: 18px; border-bottom: 1px solid #8B4513; text-indent: 1em; width: 210px; }
-
-#aboutus p { text-indent: 2em; line-height: 22px; }
-#news ul { margin: 7px 10px 0 5px; }
-#news li, #chanpin-neirong li { background: url(../image/news_sticker.jpg) no-repeat 4px; height: 26px; line-height: 26px; padding-left: 16px; border-bottom: 1px dotted #999999; }
-#news li a { float: left; }
-#chanpin-neirong { width: 200px; margin-top: 10px; }
-#news li span { float: right; color: #818181; }
+/* some content switching by categories */
 .switch span { display: block; float: left; text-align: center; cursor: pointer; background-position: right; }
 .switch span.act { cursor: default; background-position: left; }
-#news .switch { height: 26px; border-bottom: 1px solid #AF4603; }
-#news .switch span { width: 79px; height: 26px; line-height: 26px; background-image: url(../image/bg_news_cate.jpg); }
-#news .switch span.act { width: 81px; color: #FFFFFF; font-weight: bold; }
-#shows .switch { height: 34px; margin: 0 100px 0 15px; }
-#shows .switch span { height: 34px; width: 151px; line-height: 28px; background-image: url(../image/bg_shows_cate.jpg); }
-#shows .switch span.act { width: 141px; color: #FFFFFF; }
-#shows ul { margin: 20px 10px; }
-#shows li { float: left; margin: 0 5px; }
-#shows li { text-align: center; }
-#shows li a div { border: 1px solid #E0E0E0; width: 100px; height: 90px; text-align: center; margin-bottom: 12px; }
-#shows li a:hover div { border-color: #AAAAAA; }
-#shows li a div img { margin-top: 9px; width: 94px; height: 71px; }
 
 ul.cpzs { }
 ul.cpzs li { float: left; margin: 0 11px; text-align: center; }

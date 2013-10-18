@@ -9,10 +9,10 @@ body { background: #EAEAEA; }
 #ct { }
 #ct * { color: #414141; }
 
-#sd { margin: 0; }
 .title { display: block; overflow: hidden; text-indent: -999px; height: 38px; background-repeat: no-repeat; }
 .splitline { border-top: 1px solid #D8D8D8; border-bottom: 1px solid #F4F4F4; }
-#ProductsClass, #ProductsShow, #AboutUs, #ContactUs, #Strength, #Success, #News, #Navs { margin: 5px; float: left; }
+.more { width: 84px; height: 23px; right: 20px; top: 10px; background: url(../image/bg_more.jpg); }
+#ProductsClass, #ProductsShow, #AboutUs, #ContactUs, #Strength, #Success, #News, #Navs { position: relative; margin: 5px; float: left; }
 #ProductsClass { width: 245px; }
 #ProductsClass .title { background-image: url(../image/title_productsclass.jpg); }
 #ProductsShow { width: 735px; }
@@ -26,8 +26,16 @@ body { background: #EAEAEA; }
 #Success .title { background-image: url(../image/title_success.jpg); }
 #News { width: 375px; margin-top: 15px; }
 #News .title { background-image: url(../image/title_news.jpg); }
+#News .switch { position: absolute; top: 14px; left: 110px; }
+#News .switch span { width: 60px; text-decoration: underline; color: #578EB3; }
+#News .switch span.act { text-decoration: none; font-weight: bold; color: #444444; }
 #Navs { width: 230px; height: 250px; background: url(../image/nav_btn.jpg) no-repeat center center; margin: 5px 10px; }
 #Navs a { position: relative; width: 230px; height: 54px; margin-top: 3px; margin-bottom: 10px; }
+#sd { margin: 0; }
+#mn { margin: 0; width: 740px; }
+#mn #AboutUs { width: auto; }
+#mn #AboutUs .intro { width: auto; }
+#mn #News { width: 730px; margin-top: 5px; }
 
 #ProductsClass ul { margin: 10px; }
 #ProductsClass li { line-height: 22px; padding-left: 16px; background: url(../image/bg_list_sticker.jpg) no-repeat 5px center; }

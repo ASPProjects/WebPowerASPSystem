@@ -28,6 +28,9 @@
 </ul>
 </div>
 <script type="text/javascript" src="static/js/switch.js"></script>
+<script type="text/javascript">
+bindSwitch('news',{'企业新闻':'news_company','行业新闻':'news_Industry'})
+</script>
 <!--#include file="../../../template/default/common/links.asp"-->
 </div>
 <!--#include file="../part/footer.asp"-->

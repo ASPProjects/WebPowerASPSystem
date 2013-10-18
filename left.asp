@@ -36,7 +36,7 @@ Folder(1)
         If ISHTML = 1 Then
             AutoLink = ""&ProSortName&""&Separated&""&rs("ID")&""&Separated&"1."&HTMLName&""
         Else
-            AutoLink = "ProductList.Asp?SortID="&rs("ID")&""
+            AutoLink = "product.asp?SortID="&rs("ID")&""
         End If 
         response.Write("<li><a href="""&AutoLink&""" title="""&FolderName&""">"&FolderName&"</a></li>")
 
