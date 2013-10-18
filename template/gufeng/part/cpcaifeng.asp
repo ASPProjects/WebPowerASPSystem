@@ -115,7 +115,7 @@ For tr = 1 To 6
         If ISHTML = 1 Then
             AutoLink = ""&ProName&""&Separated&""&rs("ID")&"."&HTMLName&""
         Else
-            AutoLink = "ProductView.Asp?ID="&rs("ID")&"&SortID="&rs("sortID")&"&SortPath="&rs("SortPath")&""
+            AutoLink = "product.Asp?ID="&rs("ID")&"&SortID="&rs("sortID")&"&SortPath="&rs("SortPath")&""
         End If
         SmallPicPath = HtmlSmallPic(rs("GroupID"), rs("SmallPic"), rs("Exclusive"))
 		

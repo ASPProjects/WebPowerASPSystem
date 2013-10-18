@@ -5,7 +5,13 @@
 <div id="ProductsShow">
 <span class="title">产品展示</span>
 <div class="splitline"></div>
-<!--#include file="../part/cpcaifeng.asp"-->
+<%
+If ID <> "" Or Not IsNumeric(ID) Then
+    %><!--#include file="../part/cpzs.asp"--><%
+Else
+    %><!--#include file="../part/cpcaifeng.asp"--><%
+End If
+%>
 </div>
 </div></div>
 <!--#include file="../part/footer.asp"-->
