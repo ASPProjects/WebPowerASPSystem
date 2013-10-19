@@ -8,3 +8,6 @@ li { list-style: none; }
 /*ie8 浮动兼容*/
 .cl:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 .cl { zoom: 1; }
+
+/* pre-underscore hack to IE6, i.e. _display: inline; */
+/* pre-asterisk hack to IE7, i.e. *display:inline-block; */
