@@ -11,3 +11,9 @@ li { list-style: none; }
 
 /* pre-underscore hack to IE6, i.e. _display: inline; */
 /* pre-asterisk hack to IE7, i.e. *display:inline-block; */
+
+/*
+<textarea id="CodeArea" style="width:100%;height:200px;"></textarea>
+<button style="width: 120px;height: 30px;" onclick="eval(document.getElementById('CodeArea').innerHTML)">Submit</button>
+IE6 testing node
+*/

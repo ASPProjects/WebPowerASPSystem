@@ -43,7 +43,7 @@ frameborder='0'
 scrolling='no'
 width='445'
 height='400'
-src='http://searchbox.mapbar.com/publish/template/template1010/index.jsp?CID=1990ch&tid=tid1010&showSearchDiv=1&cityName=%E4%BD%9B%E5%B1%B1%E5%B8%82&nid=MAPBTNTPXOYAZMFBTPHPX&width=445&height=400&infopoi=2&zoom=10&control=1'></iframe>
+src='http://searchbox.mapbar.com/publish/template/template1010/index.jsp?CID=1990ch&tid=tid1010&showSearchDiv=1&cityName=%E4%BD%9B%E5%B1%B1%E5%B8%82&nid=MAPBFNSPLOQWFVTEHOX&width=445&height=400&infopoi=2&zoom=10&control=1'></iframe>
 </div>
 </div>
 </div></div>

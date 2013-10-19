@@ -52,13 +52,13 @@
 <span class="title">实力展示</span>
 <div class="splitline"></div>
 <a class="ol more" href="#">more</a>
-<ul class="cl">
+<ul class="cl"><%=Products("1,",1,6)%>
+<!--<li><a href="#"><img src="template/gufeng/image/product_small1.jpg"/><span>钻孔机</span></a> </li>
 <li><a href="#"><img src="template/gufeng/image/product_small1.jpg"/><span>钻孔机</span></a> </li>
 <li><a href="#"><img src="template/gufeng/image/product_small1.jpg"/><span>钻孔机</span></a> </li>
 <li><a href="#"><img src="template/gufeng/image/product_small1.jpg"/><span>钻孔机</span></a> </li>
 <li><a href="#"><img src="template/gufeng/image/product_small1.jpg"/><span>钻孔机</span></a> </li>
-<li><a href="#"><img src="template/gufeng/image/product_small1.jpg"/><span>钻孔机</span></a> </li>
-<li><a href="#"><img src="template/gufeng/image/product_small1.jpg"/><span>钻孔机</span></a> </li>
+<li><a href="#"><img src="template/gufeng/image/product_small1.jpg"/><span>钻孔机</span></a> </li>-->
 </ul>
 </div>
 <div id="Success">

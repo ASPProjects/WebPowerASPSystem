@@ -1,4 +1,4 @@
-﻿<%=WebContent("Qianbo_NewsSort",2,"")%>
+﻿<%=WebContent("Qianbo_NewsSort","","")%>
    <%
    
    Function WebContent(DataFrom, ID, SortPath)
@@ -89,9 +89,9 @@ While Not rs.EOF
     If ISHTML = 1 Then
         AutoLink = ""&NewName&""&Separated&""&rs("ID")&"."&HTMLName&""
     Else
-        AutoLink = "NewsView.Asp?ID="&rs("ID")&""
+        AutoLink = "News.Asp?ID="&rs("ID")&""
     End If
-     Response.Write "<li><img src=""images/jt.jpg""><a href="""&AutoLink&""" title="""&rs("NewsName")&""">"&rs("NewsName")&"</a>"&FormatDate(rs("Addtime"), 13)&"</li>"&vbCrLf
+     Response.Write "<li><a href="""&AutoLink&""" title="""&rs("NewsName")&""">"&rs("NewsName")&"</a><span>"&FormatDate(rs("Addtime"), 13)&"</span></li>"&vbCrLf
     rs.movenext
 Wend
 Response.Write "</ul>"&vbCrLf

@@ -1,8 +1,59 @@
 <%
+
+Function Products(SortPath, trs, tds)
+    Dim rs, sql, tr, td, ProductName, SmallPicPath
+    Set rs = server.CreateObject("adodb.recordset")
+    sql = "select top "&trs * tds&" * from Qianbo_Products where ViewFlag and CommendFlag order by id desc"
+    'sql="select top "&trs*tds&" * from Qianbo_Products where ViewFlag and CommendFlag and Instr(SortPath,'"&SortPath&"')>0 order by id desc"
+    'sql="select top "&trs*tds&" * from Qianbo_Products where ViewFlag and NewFlag order by id desc"
+    rs.Open sql, conn, 1, 1
+    If rs.EOF Then
+        response.Write "暂无相关信息"
+    Else
+        'Response.Write "<table cellpadding=""0"" cellspacing=""0"">"&vbCrLf
+        For tr = 1 To trs
+            'Response.Write "  <tr>"&vbCrLf
+            For td = 1 To tds
+                If StrLen(rs("ProductName"))<= 18 Then
+                    ProductName = rs("ProductName")
+                Else
+                    ProductName = StrLeft(rs("ProductName"), 16)
+                End If
+                If ISHTML = 1 Then
+                    AutoLink = ""&ProName&""&Separated&""&rs("ID")&"."&HTMLName&""
+                Else
+                    AutoLink = "ProductView.Asp?ID="&rs("id")&""
+                End If
+                SmallPicPath = HtmlSmallPic(rs("GroupID"), rs("SmallPic"), rs("Exclusive"))
+                Response.Write("<li><a href="""&SmallPicPath&""" rel=""lightbox"" title="""&rs("ProductName")&"""><img src="""&SmallPicPath&""" alt="""&rs("ProductName")&"""/><span>"&ProductName&"</span></a> </li>"&vbCrLf)
+                'Response.Write "    <td><table cellpadding=""2"" cellspacing=""0"" >"&vbCrLf
+                'Response.Write "        <tr>"&vbCrLf
+                'Response.Write "          <td style=""border: 1px solid #ccc; text-align:center;""><a href="""&SmallPicPath&""" rel=""lightbox"" title="""&rs("ProductName")&"""><img src="""&SmallPicPath&""" alt="""&rs("ProductName")&""" width=""130"" /></a></td>"&vbCrLf
+                'Response.Write "        </tr>"&vbCrLf
+                'Response.Write "        <tr>"&vbCrLf
+                'Response.Write "          <td style=""height:20px; text-align:center;""><a href="""&AutoLink&""" title="""&rs("ProductName")&""">"&ProductName&"</a></td>"&vbCrLf
+                'Response.Write "        </tr>"&vbCrLf
+                'Response.Write "        <tr>"&vbCrLf
+                'Response.Write "          <td style=""height:20px; text-align:center;"">产品型号："&rs("ProductModel")&"</td>"&vbCrLf
+                'Response.Write "        </tr>"&vbCrLf
+                'Response.Write "      </table></td>"&vbCrLf
+                'Response.Write "    <td width=""8""></td>"&vbCrLf
+                rs.movenext
+                If rs.EOF Then Exit For
+            Next
+            'Response.Write "  </tr>"&vbCrLf
+            If rs.EOF Then Exit For
+        Next
+        'Response.Write "</table>"&vbCrLf
+    End If
+    rs.Close
+    Set rs = Nothing
+End Function
+
 Function News(SortPath)
     Dim rs, sql, NewsName, NewFlag,AddTime
     Set rs = server.CreateObject("adodb.recordset")
-        sql = "select top 6 * from Qianbo_News where ViewFlag and Instr(SortPath,'"&SortPath&"')>0 order by id desc"
+        sql = "select top 8 * from Qianbo_News where ViewFlag and Instr(SortPath,'"&SortPath&"')>0 order by id desc"
     rs.Open sql, conn, 1, 1
   
     If rs.EOF Then
@@ -59,55 +110,6 @@ Function News2(SortPath)
         Loop
     End If
 
-    rs.Close
-    Set rs = Nothing
-End Function
-
-Function Products(SortPath, trs, tds)
-    Dim rs, sql, tr, td, ProductName, SmallPicPath
-    Set rs = server.CreateObject("adodb.recordset")
-    sql = "select top "&trs * tds&" * from Qianbo_Products where ViewFlag and CommendFlag order by id desc"
-    'sql="select top "&trs*tds&" * from Qianbo_Products where ViewFlag and CommendFlag and Instr(SortPath,'"&SortPath&"')>0 order by id desc"
-    'sql="select top "&trs*tds&" * from Qianbo_Products where ViewFlag and NewFlag order by id desc"
-    rs.Open sql, conn, 1, 1
-    If rs.EOF Then
-        response.Write "暂无相关信息"
-    Else
-        Response.Write "<table cellpadding=""0"" cellspacing=""0"">"&vbCrLf
-        For tr = 1 To trs
-            Response.Write "  <tr>"&vbCrLf
-            For td = 1 To tds
-                If StrLen(rs("ProductName"))<= 18 Then
-                    ProductName = rs("ProductName")
-                Else
-                    ProductName = StrLeft(rs("ProductName"), 16)
-                End If
-                If ISHTML = 1 Then
-                    AutoLink = ""&ProName&""&Separated&""&rs("ID")&"."&HTMLName&""
-                Else
-                    AutoLink = "ProductView.Asp?ID="&rs("id")&""
-                End If
-                SmallPicPath = HtmlSmallPic(rs("GroupID"), rs("SmallPic"), rs("Exclusive"))
-                Response.Write "    <td><table cellpadding=""2"" cellspacing=""0"" >"&vbCrLf
-                Response.Write "        <tr>"&vbCrLf
-                Response.Write "          <td style=""border: 1px solid #ccc; text-align:center;""><a href="""&SmallPicPath&""" rel=""lightbox"" title="""&rs("ProductName")&"""><img src="""&SmallPicPath&""" alt="""&rs("ProductName")&""" width=""130"" /></a></td>"&vbCrLf
-                Response.Write "        </tr>"&vbCrLf
-                Response.Write "        <tr>"&vbCrLf
-                Response.Write "          <td style=""height:20px; text-align:center;""><a href="""&AutoLink&""" title="""&rs("ProductName")&""">"&ProductName&"</a></td>"&vbCrLf
-                Response.Write "        </tr>"&vbCrLf
-                Response.Write "        <tr>"&vbCrLf
-                Response.Write "          <td style=""height:20px; text-align:center;"">产品型号："&rs("ProductModel")&"</td>"&vbCrLf
-                Response.Write "        </tr>"&vbCrLf
-                Response.Write "      </table></td>"&vbCrLf
-                Response.Write "    <td width=""8""></td>"&vbCrLf
-                rs.movenext
-                If rs.EOF Then Exit For
-            Next
-            Response.Write "  </tr>"&vbCrLf
-            If rs.EOF Then Exit For
-        Next
-        Response.Write "</table>"&vbCrLf
-    End If
     rs.Close
     Set rs = Nothing
 End Function
