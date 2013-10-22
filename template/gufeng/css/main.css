@@ -33,9 +33,10 @@ body { background: #EAEAEA; }
 #Navs a { position: relative; width: 230px; height: 54px; margin-top: 3px; margin-bottom: 10px; }
 
 #ProductsClass ul { margin: 10px; }
-#ProductsClass li { line-height: 22px; padding-left: 16px; background: url(../image/bg_list_sticker.jpg) no-repeat 5px center; }
+#ProductsClass li { line-height: 30px; padding-left: 16px; background: url(../image/bg_list_sticker.jpg) no-repeat 5px center; border-bottom: 1px dashed #666; }
+#ProductsClass li a { font-size: 18px; }
 #ProductsShow li, #Strength li { float: left; margin: 10px; _display: inline; }
-#ProductsShow li a img, #Strength li a img { border: 1px solid #D7D7D7; }
+#ProductsShow li a img, #Strength li a img { /*border: 1px solid #D7D7D7;*/ }
 #Strength img { width: 136px; height: 136px; vertical-align: middle; }
 #ProductsShow li span, #Strength li span { display: block; margin: 2px auto; text-align: center; }
 #AboutUs #youku, #AboutUs .intro { float: left; margin: 20px 10px; _display: inline; }
@@ -54,7 +55,6 @@ body { background: #EAEAEA; }
 #News li a { _display: inline; _float: left; }
 #News li span { float: right; color: #999999; }
 .mm p { text-indent: 2em; }
-
 
 #sd { margin: 0; }
 #mn { margin: 0; width: 740px; }

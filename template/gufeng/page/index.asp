@@ -1,17 +1,19 @@
 <!--#include file="../part/header.asp"-->
 <!--#include file="../part/productsclass.asp"-->
+<script type="text/javascript" src="static/js/imgcrop.js"></script>
 <div id="ProductsShow">
 <span class="title">产品展示</span>
 <div class="splitline"></div>
 <a class="ol more" href="product.asp">more</a>
-<ul class="cl" style="display: none;">
+<!--<ul class="cl" style="display: none;">
 <li><a href="#"><img src="template/gufeng/image/product1.jpg"/><span>产品展示</span></a> </li>
 <li><a href="#"><img src="template/gufeng/image/product1.jpg"/><span>产品展示</span></a> </li>
 <li><a href="#"><img src="template/gufeng/image/product1.jpg"/><span>产品展示</span></a> </li>
 <li><a href="#"><img src="template/gufeng/image/product1.jpg"/><span>产品展示</span></a> </li>
-</ul>
+</ul>-->
 <!--#include file="../part/cpgundongcaifeng.asp"-->
 </div>
+<script type="text/javascript">ImgCrops('#ProductsShow')</script>
 <div id="AboutUs">
 <span class="title">关于我们</span>
 <div class="splitline"></div>

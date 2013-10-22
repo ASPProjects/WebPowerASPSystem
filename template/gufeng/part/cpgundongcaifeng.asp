@@ -17,7 +17,7 @@ while Not rs.Eof
 <td height="5"></td>
 </tr>
 <tr>
-<td align="center" style="border:1px #CCCCCC solid;" ><a href="ProductView.Asp?ID=<% =rs("ID")%>" target=_blank><img style=" padding:2px" src="<% =rs("SmallPic")%>" height="120px" border="0" title="<% =rs("ProductName")%>"></a></td>
+<td align="center" style="border:1px #CCCCCC solid;" ><a href="ProductView.Asp?ID=<% =rs("ID")%>" target=_blank><img style=" padding:2px" src="<% =rs("SmallPic")%>" border="0" title="<% =rs("ProductName")%>"></a></td>
 </tr>
 </table></td>
 </tr>
