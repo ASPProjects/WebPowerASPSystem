@@ -5,7 +5,7 @@ body { background: #EAEAEA; }
 #fav a { display: block; background: #537DE7; width: 70px; text-align: center; margin: 0 5px; line-height: 26px; float: left; }
 #nav { float: right; margin: 27px 13px 0 0; }
 #nav a { width: 80px; background: none; }
-#banner { float: right; width: 970px; height: 307px; margin: 4px 16px 30px; }
+#banner { float: right; width: 970px; height: 307px; margin: 4px 18px 30px; }
 #ct { }
 #ct * { color: #414141; }
 
