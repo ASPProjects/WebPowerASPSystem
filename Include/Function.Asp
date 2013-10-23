@@ -1,4 +1,10 @@
 ﻿<%
+Function Include(File)
+    If File <> "" and Not IsNumeric(File) Then
+    Else
+    End If
+End Function
+
 Function clscache()
     Dim cacheobj
     application.Lock
