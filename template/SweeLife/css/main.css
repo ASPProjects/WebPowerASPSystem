@@ -17,14 +17,22 @@ body { background: url(../image/bg_body.jpg); }
 #submit { background: none; border: none; width: 25px; height: 21px; cursor: pointer; }
 #subnav { height: 30px; background: #EB5B5C; }
 #fav a { display: block; background: #537DE7; width: 70px; text-align: center; margin: 0 5px; line-height: 26px; float: left; }
-#nav { float: right; margin: 27px 13px 0 0; clear: none; }
-#nav a { width: 80px; background: none; line-height: normal; }
+#nav { float: right; margin: 27px 13px 0 0; clear: none; height: 32px; }
+#nav a { width: 80px; height: 32px; background: none; line-height: normal; }
 #nav span, #nav a { color: #7E7E7E; float: left; }
+#sub { margin-left: 715px; }
+#sub a { line-height: 30px; }
 #banner { float: right; width: 970px; height: 307px; margin: 4px 18px 30px; }
+#SW { width: 189px; height: 64px; margin: 71px 0 0 34px; float: left; _display: inline; }
+#SW a { display: block; width: 100%; line-height: 32px; vertical-align: middle; color: #B0B0B0; }
+#SW a div { width: 18px; height: 2px; float: left; padding-left: 18px; margin-top: 14px; }
+#SW a div span { display: block; background-color: #B0B0B0; width: 12px; height: 5px; }
+#SW a:hover { color: #ED6566; }
+#SW a:hover div span { background-color: #ED6566; }
 #ct { }
 #ct img { vertical-align: middle; }
 #ct * { color: #414141; }
-#products { height: 203px; background: url(../image/bg_products.jpg); }
+#products { padding-top: 1px; height: 202px; background: url(../image/bg_products.jpg); }
 #flinks { line-height: 34px; border: 1px solid #CFCFCF; border-right: 0; border-left: 0; padding-left: 30px; }
 #flinks span { color: #A36B13; }
 
@@ -34,7 +42,7 @@ body { background: url(../image/bg_body.jpg); }
 #ProductsClass, #ProductsShow, #AboutUs, #ContactUs, #Strength, #Success, #News, #Navs { position: relative; margin: 5px; float: left; _display: inline; }
 #ProductsClass { width: 245px; }
 #ProductsClass .title { background-image: url(../image/title_productsclass.jpg); }
-#ProductsShow { width: 735px; }
+#ProductsShow { width: 715px; height: 100px; margin: 36px 0px 0px 47px; }
 #ProductsShow .title { background-image: url(../image/title_productsshow.jpg); }
 #AboutUs { width: 745px; height: 288px; }
 #AboutUs .title { background-image: url(../image/title_aboutus.jpg); }

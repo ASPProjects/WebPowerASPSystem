@@ -21,7 +21,7 @@
 <div id="nav" class="cl">
 <a href="index.asp">首页   </a> <span>|</span>
 <a href="aboutus.asp">关于我们</a><span>|</span>
-<a href="product.asp">产品中心</a><span>|</span>
+<a href="product.asp" style="background: url(template/sweelife/image/navpointer.jpg) no-repeat center bottom;">产品中心</a><span>|</span>
 <a href="news.asp">新闻中心</a><span>|</span>
 <a href="strength.asp">实力展示</a><span>|</span>
 <a href="service.asp">服务支持</a><span>|</span>
@@ -29,7 +29,9 @@
 </div>
 </div>
 </div>
-<div id="subnav"></div>
+<div id="subnav">
+ <div id="sub"><a href="#">SWN多彩世界系列</a>   &nbsp; &nbsp; &nbsp; <a href="#">SWW可户外玉白系列</a></div>
+ </div>
 <div class="wp cl">
 <!--<div id="fav">
 <a style="background: #5561F8;" href="#">设为主页</a>

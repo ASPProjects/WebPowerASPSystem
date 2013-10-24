@@ -1,7 +1,16 @@
 <!--#include file="../part/header.asp"-->
 <img src="template/SweeLife/image/banner_sweelife.jpg" />
 <img src="template/SweeLife/image/temp_slidebanner.jpg" />
-<div id="products"></div>
+<div id="products">
+
+<div id="SW">
+<a href="#"><div><span></span></div>SWN多彩世界系列</a>
+<a href="#"><div><span></span></div>SWW可户外玉白系列</a>
+</div>
+<div id="ProductsShow">
+
+</div>
+</div>
 <!--#include file="../part/footer.asp"-->
 <%
 Function WebMenu(ParentID, i, level)
