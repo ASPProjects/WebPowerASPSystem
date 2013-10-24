@@ -1,5 +1,6 @@
 ﻿<!--#include file="Charset.Asp" -->
 <%
+Const Template = "SweeLife"
 Const SysRootDir = "../"
 Const SiteDataPath = "Qianbo.Qianbo"
 Const EnableStopInjection = True

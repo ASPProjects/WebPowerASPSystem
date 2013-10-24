@@ -34,4 +34,4 @@ Else
     Set rs = Nothing
 End If
 %>
-<!--#include file="template/gufeng/page/news.asp"-->
+<!--#include file="template/SweeLife/page/news.asp"-->

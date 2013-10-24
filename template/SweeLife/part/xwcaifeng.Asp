@@ -1,13 +1,12 @@
-﻿
-<%=WebContent("Qianbo_ProductSort",request.QueryString("SortID") ,"")%>
-<%
+﻿<%=WebContent("Qianbo_NewsSort","","")%>
+   <%
    
    Function WebContent(DataFrom, ID, SortPath)
     Dim rs, sql
     Dim HideSort
     Set rs = server.CreateObject("adodb.recordset")
-    If ID = "" Then 
-        SortPath = "0,1,2,"
+    If ID = "" Then
+        SortPath = "0,"
     ElseIf Not IsNumeric(ID) Then
         response.Write "<center>暂无相关信息</center>"
         Exit Function
@@ -27,17 +26,17 @@
     rs.Close
     Dim idCount
     Dim pages
-    pages = ProInfo
+    pages = NewInfo
     Dim pagec
     Dim page
     page = CLng(request("Page"))
     Dim pagenc
-    pagenc = 4
+    pagenc = 5
     Dim pagenmax
     Dim pagenmin
     Dim pageprevious
     Dim pagenext
-    datafrom = "Qianbo_Products"
+    datafrom = "Qianbo_News"
     Dim datawhere
     datawhere = "where ViewFlag and Instr(SortPath,'"&SortPath&"')>0 "&HideSort& " "
     Dim sqlid
@@ -52,7 +51,7 @@
         Myself = Left(PATH_INFO & "?" & QUERY_STRING, InStr(PATH_INFO & "?" & QUERY_STRING, "Page=") -1)
     End If
     Dim taxis
-    taxis = "order by id asc "
+    taxis = "order by id desc "
     Dim i
     sql = "select count(ID) as idCount from ["& datafrom &"]" & datawhere
     Set rs = server.CreateObject("adodb.recordset")
@@ -83,68 +82,23 @@ Next
 End If
 If(idcount>0 And sqlid<>"") Then
 sql = "select * from ["& datafrom &"] where id in("& sqlid &") "&taxis
-
 Set rs = server.CreateObject("adodb.recordset")
-rs.Open sql, conn, 1, 1
-
-
-
-
-
-
-    OtherPic = rs("OtherPic")
-    If Not(IsNull(OtherPic)) Then
-        OtherPic = Split(OtherPic, "*")
+rs.Open sql, conn, 0, 1
+Response.Write "<ul>"&vbCrLf
+While Not rs.EOF
+    If ISHTML = 1 Then
+        AutoLink = ""&NewName&""&Separated&""&rs("ID")&"."&HTMLName&""
+    Else
+        AutoLink = "News.Asp?ID="&rs("ID")&""
     End If
-
-
-
-
-
-Dim tr, td
-Dim ProductName, SmallPicPath, Content
-Response.Write "<ul class=""cpzs"">"&vbCrLf
-For tr = 1 To 6
-
-    For td = 1 To 6
-        If StrLen(rs("ProductName"))<= 12 Then
-            ProductName = rs("ProductName")
-        Else
-            ProductName = StrLeft(rs("ProductName"), 30)
-        End If
-        If ISHTML = 1 Then
-            AutoLink = ""&ProName&""&Separated&""&rs("ID")&"."&HTMLName&""
-        Else
-            AutoLink = "ProductView.Asp?ID="&rs("ID")&"&SortID="&rs("sortID")&"&SortPath="&rs("SortPath")&""
-        End If
-        SmallPicPath = HtmlSmallPic(rs("GroupID"), rs("SmallPic"), rs("Exclusive"))
-		
-		Response.Write "<li><a href="&AutoLink&" title="""&rs("ProductName")&""" ><img onload=""tupianjiaz(this)"" src="""&SmallPicPath&""" alt="&rs("ProductName")&" width=""188px"" height=""152""></a><a class=""name"" href="&AutoLink&""&request.QueryString("SortID")&">"&ProductName&"</a></li>"
-		
-       
-        rs.movenext
-		
-        If rs.EOF Then Exit For
-		
-    Next
-
-    If rs.EOF Then Exit For
-Next
-
-
+     Response.Write "<li><a href="""&AutoLink&""" title="""&rs("NewsName")&""">"&rs("NewsName")&"</a><span>"&FormatDate(rs("Addtime"), 13)&"</span></li>"&vbCrLf
+    rs.movenext
+Wend
 Response.Write "</ul>"&vbCrLf
-
-
 Else
     response.Write "<center>暂无相关信息</center>"
     Exit Function
 End If
-
-
-
-
-
-
 Response.Write "<div class=""yema"">"&vbCrLf
 Response.Write "共"&idcount&"条记录 页次："&page&"</strong>/"&pagec&" 每页："&pages&"条记录" & vbCrLf
 pagenmin = page - pagenc
@@ -152,9 +106,9 @@ pagenmax = page+pagenc
 If(pagenmin<1) Then pagenmin = 1
 If ISHTML = 1 Then
     If ID = "" Then
-        If(page>1) Then response.Write ("<a href="""&ProSortName&""&Separated&"1."&HTMLName&""" title=""回到第一页""><font face=""webdings"" color=""#000000"">9</font></a> ")
+        If(page>1) Then response.Write ("<a href="""&NewSortName&""&Separated&"1."&HTMLName&""" title=""回到第一页""><font face=""webdings"" color=""#000000"">9</font></a> ")
     Else
-        If(page>1) Then response.Write ("<a href="""&ProSortName&""&Separated&""&ID&""&Separated&"1."&HTMLName&""" title=""回到第一页""><font face=""webdings"" color=""#000000"">9</font></a> ")
+        If(page>1) Then response.Write ("<a href="""&NewSortName&""&Separated&""&ID&""&Separated&"1."&HTMLName&""" title=""回到第一页""><font face=""webdings"" color=""#000000"">9</font></a> ")
     End If
 Else
     If(page>1) Then response.Write ("<a href="""& myself &"Page=1"" title=""回到第一页""><font face=""webdings"" color=""#000000"">9</font></a> ")
@@ -166,47 +120,29 @@ Else
 End If
 If ISHTML = 1 Then
     If ID = "" Then
-        If(pagenmin>1) Then response.Write ("<a href="""&ProSortName&""&Separated&""&pageprevious&"."&HTMLName&""" title=""第"& pageprevious &"页""><font face=""webdings"" color=""#000000"">3</font></a> ")
+        If(pagenmin>1) Then response.Write ("<a href="""&NewSortName&""&Separated&""&pageprevious&"."&HTMLName&""" title=""第"& pageprevious &"页""><font face=""webdings"" color=""#000000"">3</font></a> ")
     Else
-        If(pagenmin>1) Then response.Write ("<a href="""&ProSortName&""&Separated&""&ID&""&Separated&""&pageprevious&"."&HTMLName&""" title=""第"& pageprevious &"页""><font face=""webdings"" color=""#000000"">3</font></a> ")
+        If(pagenmin>1) Then response.Write ("<a href="""&NewSortName&""&Separated&""&ID&""&Separated&""&pageprevious&"."&HTMLName&""" title=""第"& pageprevious &"页""><font face=""webdings"" color=""#000000"">3</font></a> ")
     End If
 Else
     If(pagenmin>1) Then response.Write ("<a href="""& myself &"Page="& pageprevious &""" title=""第"& pageprevious &"页""><font face=""webdings"" color=""#000000"">3</font></a> ")
 End If
-dim xianshi
-
 If(pagenmax>pagec) Then pagenmax = pagec
-
-
 For i = pagenmin To pagenmax
     If(i = page) Then
-    'response.Write ("&nbsp;<strong style=""color:red"">"& i &"</strong>&nbsp;")
-	xianshi=i
+    response.Write ("&nbsp;<strong style=""color:red"">"& i &"</strong>&nbsp;")
 Else
-'    If ISHTML = 1 Then
-'        If ID = "" Then
-'            response.Write ("[<a href="""&ProSortName&""&Separated&""&i&"."&HTMLName&""">"& i &"</a>]")
-'        Else
-'            response.Write ("[<a href="""&ProSortName&""&Separated&""&ID&""&Separated&""&i&"."&HTMLName&""">"& i &"</a>]")
-'        End If
-'    Else
-'        response.Write ("[<a href="""& myself &"Page="&i&""">"& i &"</a>]")
-'    End If
+    If ISHTML = 1 Then
+        If ID = "" Then
+            response.Write ("[<a href="""&NewSortName&""&Separated&""&i&"."&HTMLName&""">"& i &"</a>]")
+        Else
+            response.Write ("[<a href="""&NewSortName&""&Separated&""&ID&""&Separated&""&i&"."&HTMLName&""">"& i &"</a>]")
+        End If
+    Else
+        response.Write ("[<a href="""& myself &"Page="&i&""">"& i &"</a>]")
+    End If
 End If
 Next
-
-if xianshi>1 then
-
-response.Write ("[<a href="""& myself &"Page="&(xianshi-1)&""">上一页</a>]")
-else 
-end if
-
-if xianshi<pagec then
-
-response.Write("[<a href="""& myself &"Page="&(xianshi+1)&""">下一页</a>]")
-
-end if
-
 If page+(pagenc * 2 + 1)>= pagec Then
     pagenext = pagec
 Else
@@ -214,14 +150,14 @@ Else
 End If
 If ISHTML = 1 Then
     If ID = "" Then
-        If(pagenmax<pagec) Then response.Write (" <a href="""&ProSortName&""&Separated&""&pagenext&"."&HTMLName&""" title=""跳转到第"&pagenext&"页"">跳转到第"&pagenext&"页</a> ")
-        If(page<pagec) Then response.Write (" <a href="""&ProSortName&""&Separated&""&pagec&"."&HTMLName&""" title=""跳转到第"&pagec&"页""><font face=""webdings"" color=""#000000"">:</font></a>")
+        If(pagenmax<pagec) Then response.Write (" <a href="""&NewSortName&""&Separated&""&pagenext&"."&HTMLName&""" title=""跳转到第"&pagenext&"页""><font face=""webdings"" color=""#999999"">:</font></a> ")
+        If(page<pagec) Then response.Write (" <a href="""&NewSortName&""&Separated&""&pagec&"."&HTMLName&""" title=""跳转到第"&pagec&"页""><font face=""webdings"" color=""#000000"">:</font></a>")
     Else
-        If(pagenmax<pagec) Then response.Write (" <a href="""&ProSortName&""&Separated&""&ID&""&Separated&""&pagenext&"."&HTMLName&""" title=""跳转到第"&pagenext&"页""><font face=""webdings"" color=""#999999"">:</font></a> ")
-        If(page<pagec) Then response.Write (" <a href="""&ProSortName&""&Separated&""&ID&""&Separated&""&pagec&"."&HTMLName&""" title=""跳转到第"&pagec&"页""><font face=""webdings"" color=""#000000"">:</font></a>")
+        If(pagenmax<pagec) Then response.Write (" <a href="""&NewSortName&""&Separated&""&ID&""&Separated&""&pagenext&"."&HTMLName&""" title=""跳转到第"&pagenext&"页""><font face=""webdings"" color=""#999999"">:</font></a> ")
+        If(page<pagec) Then response.Write (" <a href="""&NewSortName&""&Separated&""&ID&""&Separated&""&pagec&"."&HTMLName&""" title=""跳转到第"&pagec&"页""><font face=""webdings"" color=""#000000"">:</font></a>")
     End If
 Else
-   ' If(pagenmax<pagec) Then response.Write (" <a href="""& myself &"Page="& pagenext &""" title=""跳转到第"&pagenext&"页"">跳转到第"&i&"页</a> ")
+    If(pagenmax<pagec) Then response.Write (" <a href="""& myself &"Page="& pagenext &""" title=""跳转到第"&pagenext&"页""><font face=""webdings"" color=""#999999"">:</font></a> ")
     If(page<pagec) Then response.Write (" <a href="""& myself &"Page="& pagec &""" title=""跳转到第"&pagec&"页""><font face=""webdings"" color=""#000000"">:</font></a>")
 End If
 Response.Write "</div>"&vbCrLf

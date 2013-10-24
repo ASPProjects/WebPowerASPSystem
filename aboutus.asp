@@ -15,4 +15,4 @@ Else
     Set rs = Nothing
 End If
 %>
-<!--#include file="template/gufeng/page/aboutus.asp"-->
+<!--#include file="template/SweeLife/page/aboutus.asp"-->

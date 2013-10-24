@@ -1,5 +1,5 @@
 <!--#include file="./____Core.asp" -->
-<!--#include file="template/gufeng/page/index.asp"-->
+<!--#include file="template/SweeLife/page/index.asp"-->
 <%
 'set conn=server.CreateObject("adodb.connection")
 'connstr="DBQ=" + server.mappath(database) + ";DefaultDir=;DRIVER={Microsoft Access Driver (*.mdb)};"

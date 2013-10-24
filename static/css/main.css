@@ -12,11 +12,11 @@ ul.Info { width: 200px; }
 .wp_spc { overflow: visible; height: 1px; }
 
 #header { height: 125px; background: url(../image/bg_header.jpg); }
-#logo { background: url(../image/logo.jpg) no-repeat; width: 216px; height: 86px; float: left; margin-left: 30px; }
+#logo { background: url(../image/logo.jpg) no-repeat; width: 216px; height: 86px; float: left; margin-left: 30px; _display: inline; }
 #intro { float: left; width: 400px; margin: 18px 10px 0; position: relative; }
 #intro span { display: block; line-height: 18px; }
 .light { position: absolute; top: 1px; left: 1px; }
-.light span { color: #FFFFFF; }
+.light span { color: #FFF; }
 .front { position: absolute; top: 0; left: 0; }
 #fav { float: right; margin: 14px 20px; _display: inline; }
 #nav { overflow: hidden; clear: both; height: 39px; }
@@ -45,14 +45,14 @@ ul.cpzs li a { display: block; text-align: center; width: 188px; height: 152px; 
 ul.cpzs li a:hover { border: 1px solid #1D83A6; color: #1D83A6; }
 ul.cpzs li a.name { display: inline; height: 30px; border: none; line-height: 30px; padding: 0; color: #575656; }
 div.yema { clear: both; height: 32px; line-height: 32px; text-align: center; margin-top: 10px; }
-div.yema a:link { color: #333333; padding: 0 3px; }
+div.yema a:link { color: #333; padding: 0 3px; }
 div.yema a:hover { color: #2487AA; }
 /*留言板*/
 #lybg { height: 387px; border: #E4E4E4 1px solid; border-bottom: none; margin-top: 20px }
 #lybg div { line-height: 30px; }
 .hengxian { border: #E4E4E4 1px solid; border-top: none; border-left: none; border-right: none; float: left }
 .hx-left { width: 140px; float: left; font-size: 12px; color: #434343; line-height: 30px; text-align: center; border-right: #E4E4E4 1px solid; background: #F7F7F7; }
-.hx-right { width: 526px; float: left; background: #FFFFFF; }
+.hx-right { width: 526px; float: left; background: #FFF; }
 #lylb { width: 700px; float: left; margin-top: 20px; border: #E4E4E4 1px solid; margin-left: 10px; font-size: 12px; color: #434343; }
 #ko { width: 700px; float: left; height: 20px }
 #gdkx { width: 700px; float: left; height: 10px }

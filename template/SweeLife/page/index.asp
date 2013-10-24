@@ -1,38 +1,7 @@
 <!--#include file="../part/header.asp"-->
-<div id="ct" class="wp cl">
-<div id="news">
-<div class="switch">
-<%=WebMenu(0,0,2)%>
-</div>
-<ul id="news_company">
-<%=News("1,")%>
-</ul>
-<ul id="news_Industry">
-<%=News("5,")%>
-</ul>
-</div>
-<div id="shows">
-<div class="switch">
-<span class="act">工程案例</span>
-<span>产品展示</span>
-</div>
-<a id="more" href="productlist.asp">more</a>
-<ul id="shows_case" class="cl">
-<!--#include file="../../../cpgundongcaifeng.asp"-->
-</ul>
-<ul id="shows_product" class="cl">
-<li><a href="#"><div><img src="static/image/case1.jpg"/></div><span>莆田九五医院报告2</span></a></li>
-<li><a href="#"><div><img src="static/image/case2.jpg"/></div><span>洗浴中心吊顶2</span></a></li>
-<li><a href="#"><div><img src="static/image/case3.jpg"/></div><span>湖南体育馆2</span></a></li>
-<li><a href="#"><div><img src="static/image/case4.jpg"/></div><span>报告厅2</span></a></li>
-</ul>
-</div>
-<script type="text/javascript" src="static/js/switch.js"></script>
-<script type="text/javascript">
-bindSwitch('news',{'企业新闻':'news_company','行业新闻':'news_Industry'})
-</script>
-<!--#include file="../../../template/default/common/links.asp"-->
-</div>
+<img src="template/SweeLife/image/banner_sweelife.jpg" />
+<img src="template/SweeLife/image/temp_slidebanner.jpg" />
+<div id="products"></div>
 <!--#include file="../part/footer.asp"-->
 <%
 Function WebMenu(ParentID, i, level)

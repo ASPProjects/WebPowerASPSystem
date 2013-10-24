@@ -20,4 +20,4 @@ End If
 rs.Close
 Set rs = Nothing
 %>
-<!--#include file="template/gufeng/page/contactus.asp"-->
+<!--#include file="template/SweeLife/page/contactus.asp"-->
