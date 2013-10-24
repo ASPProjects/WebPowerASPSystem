@@ -44,6 +44,8 @@ body { background: url(../image/bg_body.jpg); }
 #ProductsClass .title { background-image: url(../image/title_productsclass.jpg); }
 #ProductsShow { width: 715px; height: 100px; margin: 36px 0px 0px 47px; }
 #ProductsShow .title { background-image: url(../image/title_productsshow.jpg); }
+#ProductsShow li { background: url(../image/bg_product.png); width: 79px; height: 77px; }
+#ProductsShow li img { width: 59px; height: 59px; margin: 8px 0 0 9px; }
 #AboutUs { width: 745px; height: 288px; }
 #AboutUs .title { background-image: url(../image/title_aboutus.jpg); }
 #ContactUs { width: 235px; }
