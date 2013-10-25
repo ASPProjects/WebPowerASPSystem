@@ -18,6 +18,19 @@
 <li><a href="#"><img src="static/image/SWN005.jpg" /></a></li>
 <li><a href="#"><img src="static/image/SWN006.jpg" /></a></li>
 </ul>
+<div id="LeftArr" style="
+cursor: pointer;
+width: 60px;
+height: 100%;
+position: absolute;
+top: 0;"></div>
+<div id="RightArr" style="
+cursor: pointer;
+width: 60px;
+height: 100%;
+position: absolute;
+top: 0;
+right:0;"></div>
 </div>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
@@ -27,7 +40,7 @@ scrollPic_01.arrLeftId = "LeftArr";//左箭头ID
 scrollPic_01.arrRightId = "RightArr"; //右箭头ID
 
 scrollPic_01.frameWidth = jQuery("#ISL_Cont_2").css('width');//显示框宽度
-scrollPic_01.pageWidth = jQuery("#ISL_Cont_2 li").css('width'); //翻页宽度
+scrollPic_01.pageWidth = 99; //翻页宽度
 
 scrollPic_01.speed = 10; //移动速度(单位毫秒，越小越快)
 scrollPic_01.space = 10; //每次移动像素(单位px，越大越快)

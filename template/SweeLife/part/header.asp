@@ -20,11 +20,12 @@
 
 <div id="nav" class="cl">
 <a href="index.asp">首页   </a> <span>|</span>
-<a href="aboutus.asp">关于我们</a><span>|</span>
+<a href="aboutus.asp">走进思为</a><span>|</span>
+<a href="aboutus.asp">品牌灵感</a><span>|</span>
 <a href="product.asp" style="background: url(template/sweelife/image/navpointer.jpg) no-repeat center bottom;">产品中心</a><span>|</span>
-<a href="news.asp">新闻中心</a><span>|</span>
-<a href="strength.asp">实力展示</a><span>|</span>
-<a href="service.asp">服务支持</a><span>|</span>
+<!--<a href="news.asp">新闻中心</a><span>|</span>-->
+<a href="case.asp">应用案例</a><span>|</span>
+<a href="service.asp">经销加盟</a><span>|</span>
 <a href="contactus.asp">联系我们</a>
 </div>
 </div>

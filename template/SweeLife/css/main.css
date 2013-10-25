@@ -3,7 +3,7 @@
 body { background: url(../image/bg_body.jpg); }
 #header { background: url(../image/shadow_header.png) repeat-x center bottom; height: 156px; }
 #header a { color: #FFF; }
-#navs { background: #FFF; height: 120px; }
+#navs { background: #FFF; height: 110px; }
 #logo { width: 129px; height: 94px; background: url(../image/logo.jpg); margin-top: 10px; }
 #intro { width: 144px; height: 26px; background: url(../image/btn_intro.jpg); margin: 35px 0 0 60px; }
 #intro a { display: block; width: 50%; height: 100%; float: left; line-height: 26px; text-align: center; }
@@ -15,13 +15,13 @@ body { background: url(../image/bg_body.jpg); }
 #search * { float: left; }
 #s_key { background: none; border: none; height: 21px; width: 100px; }
 #submit { background: none; border: none; width: 25px; height: 21px; cursor: pointer; }
-#subnav { height: 30px; background: #EB5B5C; }
+#subnav { height: 40px; background: #EB5B5C; }
 #fav a { display: block; background: #537DE7; width: 70px; text-align: center; margin: 0 5px; line-height: 26px; float: left; }
 #nav { float: right; margin: 27px 13px 0 0; clear: none; height: 32px; }
-#nav a { width: 80px; height: 32px; background: none; line-height: normal; }
+#nav a { width: 80px; height: 22px; background: none; line-height: normal; }
 #nav span, #nav a { color: #7E7E7E; float: left; }
-#sub { margin-left: 715px; }
-#sub a { line-height: 30px; }
+#sub { margin-left: 800px; }
+#sub a { line-height: 20px; }
 #banner { float: right; width: 970px; height: 307px; margin: 4px 18px 30px; }
 #SW { width: 189px; height: 64px; margin: 71px 0 0 34px; float: left; _display: inline; }
 #SW a { display: block; width: 100%; line-height: 32px; vertical-align: middle; color: #B0B0B0; }
@@ -36,7 +36,7 @@ body { background: url(../image/bg_body.jpg); }
 #flinks { line-height: 34px; border: 1px solid #CFCFCF; border-right: 0; border-left: 0; padding-left: 30px; }
 #flinks span { color: #A36B13; }
 
-.title { display: block; overflow: hidden; text-indent: -999px; height: 38px; background-repeat: no-repeat; }
+.title { font-size: 18px; }
 .splitline { border-top: 1px solid #D8D8D8; border-bottom: 1px solid #F4F4F4; }
 .more { width: 84px; height: 23px; right: 20px; top: 10px; background: url(../image/bg_more.jpg); }
 #ProductsClass, #ProductsShow, #AboutUs, #ContactUs, #Strength, #Success, #News, #Navs { position: relative; margin: 5px; float: left; _display: inline; }
@@ -85,8 +85,8 @@ body { background: url(../image/bg_body.jpg); }
 #News li span { float: right; color: #999; }
 .mm p { text-indent: 2em; }
 
-#sd { margin: 0; }
-#mn { margin: 0; width: 740px; }
+#sd { margin: 20px 0 0 0; background: url(../image/bg_sd.jpg) no-repeat; }
+#mn { margin: 20px 15px 0 0; width: 740px; }
 #mn #AboutUs { width: auto; }
 #mn #AboutUs .intro { width: auto; }
 #mn #AboutUs #ContactUs { background: none; }

@@ -153,28 +153,22 @@ function ScrollPic(scrollContId, arrLeftId, arrRightId, dotListId) {
         }
     };
     this.leftMouseDown = function() {
-        if(_state != "ready") {
-            return
-        }
-
+        if(_state != "ready")return;
         _state = "floating";
-        _scrollTimeObj = setInterval("ScrollPic.childs[" + this.ID + "].moveLeft()", this.speed)
+        _scrollTimeObj = setInterval("ScrollPic.childs[" + this.ID + "].moveLeft();", this.speed)
     };
     this.rightMouseDown = function() {
-        if(_state != "ready") {
-            return
-        }
-
+        if(_state != "ready")return;
         _state = "floating";
-        _scrollTimeObj = setInterval("ScrollPic.childs[" + this.ID + "].moveRight()", this.speed)
+        _scrollTimeObj = setInterval("ScrollPic.childs[" + this.ID + "].moveRight();", this.speed)
     };
     this.moveLeft = function() {
+        console.log(this.scrollContDiv.scrollLeft);
         if(this.scrollContDiv.scrollLeft + this.space >= this.listDiv01.scrollWidth) {
             this.scrollContDiv.scrollLeft = this.scrollContDiv.scrollLeft + this.space - this.listDiv01.scrollWidth
         } else {
             this.scrollContDiv.scrollLeft += this.space
         }
-
         this.accountPageIndex()
     };
     this.moveRight = function() {
@@ -183,13 +177,10 @@ function ScrollPic(scrollContId, arrLeftId, arrRightId, dotListId) {
         } else {
             this.scrollContDiv.scrollLeft -= this.space
         }
-
         this.accountPageIndex()
     };
     this.leftEnd = function() {
-        if(_state != "floating") {
-            return
-        }
+        if(_state != "floating") return;
 
         _state = "stoping";
         clearInterval(_scrollTimeObj);
