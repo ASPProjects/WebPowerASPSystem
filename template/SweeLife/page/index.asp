@@ -1,6 +1,51 @@
 <!--#include file="../part/header.asp"-->
 <img src="template/SweeLife/image/banner_sweelife.jpg" />
-<img src="template/SweeLife/image/temp_slidebanner.jpg" />
+<script type="text/javascript">
+var imgUrl1="template/gufeng/image/banner_1.jpg";
+var imgtext1="广东佛山市景秀装饰材料有限公司";
+var imgLink1=escape("#");
+var imgUrl2="template/gufeng/image/banner_2.jpg";
+var imgtext2="广东佛山市景秀装饰材料有限公司";
+var imgLink2=escape("#");
+var imgUrl3="template/gufeng/image/banner_3.jpg";
+var imgtext3="广东佛山市景秀装饰材料有限公司";
+var imgLink3=escape("#");
+
+var focus_width=1024;
+var focus_height=494;
+var text_height=0;
+var swf_height = focus_height+text_height;
+
+var pics=imgUrl1+"|"+imgUrl2+"|"+imgUrl3;
+var links=imgLink1+"|"+imgLink2+"|"+imgLink3;
+var texts=imgtext1+"|"+imgtext2+"|"+imgtext3;
+var movie = 'static/image/focus2.swf';
+var objText =''+
+'<object '+
+'width="'+ focus_width +'" '+
+'height="'+ swf_height +'" '+
+'classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" '+
+'codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" ' +
+'style="vertical-align:middle;">'+
+'<param name="movie" value="'+movie+'?pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" />'+
+'<param name="quality" value="high" />'+
+'<param name="wmode" value="opaque" />'+
+'<embed '+
+'src="'+movie+'?pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" '+
+'width="'+ focus_width +'" '+
+'height="'+ swf_height +'" '+
+'quality="high" '+
+'wmode="opaque" '+
+'pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" '+
+'type="application/x-shockwave-flash" style="vertical-align:middle;"></embed>'+
+'</object>';
+document.write(objText);
+//document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+//document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="images/focus2.swf"><param name="quality" value="high"><param name="bgcolor" value="#F0F0F0">');
+//document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+//document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+//document.write('</object>');
+</script>
 <div id="products">
 
 <div id="SW">
@@ -32,6 +77,7 @@ position: absolute;
 top: 0;
 right:0;"></div>
 </div>
+<script type="text/javascript" src="Scripts/magnifier.js"></script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
 var scrollPic_01 = new ScrollPic();
@@ -50,6 +96,9 @@ scrollPic_01.autoPlayTime = 3; //自动播放间隔时间(秒)
 scrollPic_01.initialize(); //初始化
 
 //--><!]]>
+</script>
+<script type="text/javascript">
+magnifier("ProductsShow");
 </script>
 </div>
 <!--#include file="../part/footer.asp"-->

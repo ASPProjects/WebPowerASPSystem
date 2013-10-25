@@ -33,6 +33,36 @@
 <div id="subnav">
  <div id="sub"><a href="#">SWN多彩世界系列</a>   &nbsp; &nbsp; &nbsp; <a href="#">SWW可户外玉白系列</a></div>
  </div>
+ <script>
+$(function () {
+var closeID = 0;
+var bg = $("#nav a[style]").css('background');
+$("#nav a[style]").css('background', '');
+$('#sub').css('display','none');
+$("#nav a[style]").mouseover(function () {
+        clearTimeout(closeID);
+    $(this).css('background', bg);
+    $('#sub').show();
+    $('#subnav').mouseover(function () {
+        clearTimeout(closeID);
+       // $(this).children("ul").show();
+    }).mousedown(function () {
+       // $(this).children("ul").hide();
+    }).mouseout(function(){
+        closeID = setTimeout(function(){
+            $('#sub').hide();
+            $("#nav a[style]").css('background', '');
+        },2000);
+    })
+}).mouseout(function (event) {
+    closeID = setTimeout(function(){
+        $('#sub').hide();
+        $("#nav a[style]").css('background', '');
+    },2000);
+});
+
+})
+ </script>
 <div class="wp cl">
 <!--<div id="fav">
 <a style="background: #5561F8;" href="#">设为主页</a>
