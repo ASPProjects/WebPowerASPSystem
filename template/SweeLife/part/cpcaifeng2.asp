@@ -115,10 +115,10 @@ For tr = 1 To 6
         If ISHTML = 1 Then
             AutoLink = ""&ProName&""&Separated&""&rs("ID")&"."&HTMLName&""
         Else
-            AutoLink = "CaseView.Asp?ID="&rs("ID")&"&SortID="&rs("sortID")&"&SortPath="&rs("SortPath")&""
+            AutoLink = "Case.Asp?ID="&rs("ID")&"&SortID="&rs("sortID")&"&SortPath="&rs("SortPath")&""
         End If
         SmallPicPath = HtmlSmallPic(rs("GroupID"), rs("SmallPic"), rs("Exclusive"))
-        Response.Write "<li><img src=""images/jt.jpg""><a href="""&AutoLink&""" title="""&rs("ProductName")&""" >"&rs("ProductName")&"</a></li>"&vbCrLf
+        Response.Write "<li><a href="""&AutoLink&""" title="""&rs("ProductName")&""" >"&rs("ProductName")&"</a></li>"&vbCrLf
         rs.movenext
         If rs.EOF Then Exit For
 

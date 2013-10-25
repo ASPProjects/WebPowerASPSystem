@@ -1,24 +1,38 @@
 <!--#include file="../part/header.asp"-->
 <img src="template/SweeLife/image/banner_sweelife.jpg" />
+<a href="aboutus.asp" style="
+text-indent: -999px;
+display: block;
+position: absolute;
+width: 85px;
+height: 29px;
+top: 409px;
+left: 63px;">about us</a>
 <script type="text/javascript">
-var imgUrl1="template/gufeng/image/banner_1.jpg";
-var imgtext1="广东佛山市景秀装饰材料有限公司";
-var imgLink1=escape("#");
-var imgUrl2="template/gufeng/image/banner_2.jpg";
-var imgtext2="广东佛山市景秀装饰材料有限公司";
-var imgLink2=escape("#");
-var imgUrl3="template/gufeng/image/banner_3.jpg";
-var imgtext3="广东佛山市景秀装饰材料有限公司";
-var imgLink3=escape("#");
 
 var focus_width=1024;
 var focus_height=494;
 var text_height=0;
 var swf_height = focus_height+text_height;
 
-var pics=imgUrl1+"|"+imgUrl2+"|"+imgUrl3;
-var links=imgLink1+"|"+imgLink2+"|"+imgLink3;
-var texts=imgtext1+"|"+imgtext2+"|"+imgtext3;
+var pics=[
+"static/image/D001.jpg",
+"static/image/D002.jpg",
+"static/image/D003.jpg",
+"static/image/D004.jpg"
+].join("|");
+var links=[
+escape("#"),
+escape("#"),
+escape("#"),
+escape("#")
+].join("|");
+var texts=   [
+"佛山思为新型建材有限公司",
+"佛山思为新型建材有限公司",
+"佛山思为新型建材有限公司",
+"佛山思为新型建材有限公司"
+].join("|");
 var movie = 'static/image/focus2.swf';
 var objText =''+
 '<object '+
@@ -40,28 +54,150 @@ var objText =''+
 'type="application/x-shockwave-flash" style="vertical-align:middle;"></embed>'+
 '</object>';
 document.write(objText);
-//document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
-//document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="images/focus2.swf"><param name="quality" value="high"><param name="bgcolor" value="#F0F0F0">');
-//document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
-//document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
-//document.write('</object>');
 </script>
 <div id="products">
 
 <div id="SW">
-<a href="#"><div><span></span></div>SWN多彩世界系列</a>
-<a href="#"><div><span></span></div>SWW可户外玉白系列</a>
+<a href="product.asp?SortID=29"><div><span></span></div>SWN多彩世界系列</a>
+<a href="product.asp?SortID=30"><div><span></span></div>SWW可户外玉白系列</a>
 </div>
 
 <script src="Scripts/ScrollPic.js" type="text/javascript"></script>
 <div id="ProductsShow">
 <ul id="ISL_Cont_2" style="margin: 3px 60px 0;" class="cl">
-<li><a href="#"><img src="static/image/SWN001.jpg" /></a></li>
-<li><a href="#"><img src="static/image/SWN002.jpg" /></a></li>
-<li><a href="#"><img src="static/image/SWN003.jpg" /></a></li>
-<li><a href="#"><img src="static/image/SWN004.jpg" /></a></li>
-<li><a href="#"><img src="static/image/SWN005.jpg" /></a></li>
-<li><a href="#"><img src="static/image/SWN006.jpg" /></a></li>
+<%=WebContent2("Qianbo_ProductSort",request.QueryString("SortID") ,"")%>
+<%
+
+   Function WebContent2(DataFrom, ID, SortPath)
+    Dim rs, sql
+    Dim HideSort
+    Set rs = server.CreateObject("adodb.recordset")
+        SortPath = "0,1,"
+    sql = "select * from "&DataFrom&" Where not(ViewFlag) and Instr(SortPath,'"&SortPath&"')>0"
+    rs.Open sql, conn, 1, 1
+    While Not rs.EOF
+        HideSort = "and not(Instr(SortPath,'"&rs("SortPath")&"')>0) "&HideSort
+        rs.movenext
+    Wend
+    rs.Close
+    Dim idCount
+    Dim pages
+    pages = ProInfo
+    Dim pagec
+    Dim page
+    page = CLng(request("Page"))
+    Dim pagenc
+    pagenc = 4
+    Dim pagenmax
+    Dim pagenmin
+    Dim pageprevious
+    Dim pagenext
+    datafrom = "Qianbo_Products"
+    Dim datawhere
+    datawhere = "where ViewFlag and Instr(SortPath,'"&SortPath&"')>0 "&HideSort& " "
+    Dim sqlid
+    Dim Myself, PATH_INFO, QUERY_STRING
+    PATH_INFO = request.servervariables("PATH_INFO")
+    QUERY_STRING = request.ServerVariables("QUERY_STRING")'
+    If QUERY_STRING = "" Then
+        Myself = PATH_INFO & "?"
+    ElseIf InStr(PATH_INFO & "?" & QUERY_STRING, "Page=") = 0 Then
+        Myself = PATH_INFO & "?" & QUERY_STRING & "&"
+    Else
+        Myself = Left(PATH_INFO & "?" & QUERY_STRING, InStr(PATH_INFO & "?" & QUERY_STRING, "Page=") -1)
+    End If
+    Dim taxis
+    taxis = "order by id asc "
+    Dim i
+    sql = "select count(ID) as idCount from ["& datafrom &"]" & datawhere
+    Set rs = server.CreateObject("adodb.recordset")
+    rs.Open sql, conn, 0, 1
+    idCount = rs("idCount")
+    If(idcount>0) Then
+    If(idcount Mod pages = 0)Then
+    pagec = Int(idcount / pages)
+Else
+    pagec = Int(idcount / pages) + 1
+End If
+sql = "select id from ["& datafrom &"] " & datawhere & taxis
+Set rs = server.CreateObject("adodb.recordset")
+rs.Open sql, conn, 1, 1
+rs.pagesize = pages
+If page < 1 Then page = 1
+If page > pagec Then page = pagec
+If pagec > 0 Then rs.absolutepage = page
+For i = 1 To rs.pagesize
+    If rs.EOF Then Exit For
+    If(i = 1)Then
+    sqlid = rs("id")
+Else
+    sqlid = sqlid &","&rs("id")
+End If
+rs.movenext
+Next
+End If
+If(idcount>0 And sqlid<>"") Then
+sql = "select * from ["& datafrom &"] where id in("& sqlid &") "&taxis
+
+Set rs = server.CreateObject("adodb.recordset")
+rs.Open sql, conn, 1, 1
+
+
+
+
+
+
+    OtherPic = rs("OtherPic")
+    If Not(IsNull(OtherPic)) Then
+        OtherPic = Split(OtherPic, "*")
+    End If
+
+
+
+
+
+Dim tr, td
+Dim ProductName, SmallPicPath, Content
+For tr = 1 To 6
+
+    For td = 1 To 6
+        If StrLen(rs("ProductName"))<= 12 Then
+            ProductName = rs("ProductName")
+        Else
+            ProductName = StrLeft(rs("ProductName"), 30)
+        End If
+        If ISHTML = 1 Then
+            AutoLink = ""&ProName&""&Separated&""&rs("ID")&"."&HTMLName&""
+        Else
+            AutoLink = "product.Asp?ID="&rs("ID")&"&SortID="&rs("sortID")&"&SortPath="&rs("SortPath")&""
+        End If
+        SmallPicPath = HtmlSmallPic(rs("GroupID"), rs("SmallPic"), rs("Exclusive"))
+
+		'Response.Write "<li><a href="&AutoLink&" title="""&rs("ProductName")&""" ><img src="""&SmallPicPath&""" alt="&rs("ProductName")&" width=""188px"" height=""152""></a><a class=""name"" href="&AutoLink&""&request.QueryString("SortID")&">"&ProductName&"</a></li>"
+Response.Write("<li><a href=""product.Asp?ID="&rs("ID")&"""><img alt="""&rs("ProductName")&""" src="""&SmallPicPath&""" /></a></li>"&vbCrLf)
+
+        rs.movenext
+
+        If rs.EOF Then Exit For
+
+    Next
+
+    If rs.EOF Then Exit For
+Next
+
+
+
+
+Else
+    response.Write "<center>暂无相关信息</center>"
+    Exit Function
+End If
+
+
+rs.Close
+Set rs = Nothing
+End Function
+   %>
 </ul>
 <div id="LeftArr" style="
 cursor: pointer;

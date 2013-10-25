@@ -103,7 +103,7 @@ rs.Open sql, conn, 1, 1
 
 Dim tr, td
 Dim ProductName, SmallPicPath, Content
-Response.Write "<ul class=""cpzs"">"&vbCrLf
+Response.Write "<ul class=""cpzs"" style=""margin-top:20px;"">"&vbCrLf
 For tr = 1 To 6
 
     For td = 1 To 6
@@ -119,7 +119,7 @@ For tr = 1 To 6
         End If
         SmallPicPath = HtmlSmallPic(rs("GroupID"), rs("SmallPic"), rs("Exclusive"))
 		
-		Response.Write "<li><a href="&AutoLink&" title="""&rs("ProductName")&""" ><img onload=""tupianjiaz(this)"" src="""&SmallPicPath&""" alt="&rs("ProductName")&" width=""188px"" height=""152""></a><a class=""name"" href="&AutoLink&""&request.QueryString("SortID")&">"&ProductName&"</a></li>"
+		Response.Write "<li><a href="&AutoLink&" title="""&rs("ProductName")&""" ><img src="""&SmallPicPath&""" alt="&rs("ProductName")&" width=""188px"" height=""152""></a><a class=""name"" href="&AutoLink&""&request.QueryString("SortID")&">"&ProductName&"</a></li>"
 		
        
         rs.movenext
@@ -229,3 +229,8 @@ rs.Close
 Set rs = Nothing
 End Function
    %>
+
+<script type="text/javascript" src="Scripts/magnifier.js"></script>
+<script type="text/javascript">
+magnifier("ProductsShow");
+</script>

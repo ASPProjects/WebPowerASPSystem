@@ -3,7 +3,7 @@
 #sd a{display: block;}
 #sd .m a{position: absolute;padding-top: 25px;width: 30px;text-align: center;}
 .phone{margin: 3px 1px 1px 19px;font-size: 14px;}
-.t{font-size: 14px;font-family: fantasy;margin: 1px 1px 1px 15px;}
+.t{font-size: 14px;margin: 1px 1px 1px 15px;}
 .t span{font-size: 14px;font-family:'微软雅黑','黑体';}
 </style>
 <a href="#" style="

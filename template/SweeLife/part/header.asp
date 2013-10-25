@@ -5,11 +5,11 @@
 <div class="wp cl">
 <div id="logo"></div>
 <div id="intro">
-<a href="#">走进思为</a>
-<a style="color:#EB5B5C;" href="#">品牌灵感</a>
+<a href="aboutus.asp">走进思为</a>
+<a style="color:#EB5B5C;" href="inspir.asp">品牌灵感</a>
 </div>
 <div id="share">
-<span>分享：<a href="#">新浪</a> | <a href="#">腾讯微博</a> | <a href="#">QQ空间</a></span>
+<span>分享：<a href="http://sina.com">新浪</a> | <a href="http://t.qq.com">腾讯微博</a> | <a href="http://qzone.qq.com">QQ空间</a></span>
 <div id="search">
 <form>
 <input type="text" id="s_key">
@@ -21,7 +21,7 @@
 <div id="nav" class="cl">
 <a href="index.asp">首页   </a> <span>|</span>
 <a href="aboutus.asp">走进思为</a><span>|</span>
-<a href="aboutus.asp">品牌灵感</a><span>|</span>
+<a href="inspir.asp">品牌灵感</a><span>|</span>
 <a href="product.asp" style="background: url(template/sweelife/image/navpointer.jpg) no-repeat center bottom;">产品中心</a><span>|</span>
 <!--<a href="news.asp">新闻中心</a><span>|</span>-->
 <a href="case.asp">应用案例</a><span>|</span>
@@ -31,10 +31,10 @@
 </div>
 </div>
 <div id="subnav">
- <div id="sub"><a href="#">SWN多彩世界系列</a>   &nbsp; &nbsp; &nbsp; <a href="#">SWW可户外玉白系列</a></div>
+ <div id="sub"><a href="product.asp?SortID=29">SWN多彩世界系列</a>   &nbsp; &nbsp; &nbsp; <a href="product.asp?SortID=30">SWW可户外玉白系列</a></div>
  </div>
  <script>
-$(function () {
+/*$(function () {
 var closeID = 0;
 var bg = $("#nav a[style]").css('background');
 $("#nav a[style]").css('background', '');
@@ -61,7 +61,7 @@ $("#nav a[style]").mouseover(function () {
     },2000);
 });
 
-})
+})*/
  </script>
 <div class="wp cl">
 <!--<div id="fav">

@@ -94,7 +94,7 @@ function ScrollPic(scrollContId, arrLeftId, arrRightId, dotListId) {
             return
         }
 
-        this.scrollContDiv.style.width = this.frameWidth + "px";
+        this.scrollContDiv.style.width = parseInt(this.frameWidth) + "px";
         this.scrollContDiv.style.overflow = "hidden";
         this.listDiv01.innerHTML = this.listDiv02.innerHTML = this.scrollContDiv.innerHTML;
         this.scrollContDiv.innerHTML = "";
@@ -163,7 +163,6 @@ function ScrollPic(scrollContId, arrLeftId, arrRightId, dotListId) {
         _scrollTimeObj = setInterval("ScrollPic.childs[" + this.ID + "].moveRight();", this.speed)
     };
     this.moveLeft = function() {
-        console.log(this.scrollContDiv.scrollLeft);
         if(this.scrollContDiv.scrollLeft + this.space >= this.listDiv01.scrollWidth) {
             this.scrollContDiv.scrollLeft = this.scrollContDiv.scrollLeft + this.space - this.listDiv01.scrollWidth
         } else {

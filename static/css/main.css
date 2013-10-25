@@ -4,7 +4,7 @@
 /* contact, address, phone, fax and so on */
 ul.Title, ul.Info { float: left; }
 ul.Title li, ul.Info li { line-height: 20px; }
-ul.Title { width: 60px; }
+ul.Title { width: 80px; }
 ul.Title li { text-align: right; }
 ul.Info { width: 200px; }
 
