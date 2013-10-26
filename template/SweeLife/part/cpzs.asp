@@ -62,26 +62,6 @@ end if
 
 <div>
 
-
-<%If Not(isnull(OtherPic)) Then%>
-
-<strong style="color:red">更多产品图片：</strong><br />
-<%
-Dim htmlshop
-For htmlshop = 1 To UBound(OtherPic)
-%>
-<a href="#" onmousemove="datu('<%=trim(OtherPic(htmlshop))%>')" title="多图展示：<%=rs("ProductName")%>" rel="lightbox[otherpic]"><img src="<%=trim(OtherPic(htmlshop))%>" width="110" style="border:1px solid #ccc; margin-left:5px; margin-right:5px; margin-top:5px"></a>
-<%
-Next
-End If
-%>
-</div>
-<div>
-<span style="text-align:left;background:#CCC; display:block; color:#000; padding-left:15px">产品详细介绍：</span>
-<div style="text-align: left;">
-<%=ProcessSitelink(rs("Content"))%>
-
-</div>
 <table width="700" border="0" cellspacing="0" cellpadding="0" align="center">
 <tr>
 <td valign="top"  width="282">

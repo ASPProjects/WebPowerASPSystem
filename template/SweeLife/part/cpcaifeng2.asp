@@ -7,7 +7,7 @@
     Dim HideSort
     Set rs = server.CreateObject("adodb.recordset")
     If ID = "" Then 
-        SortPath = "0,1,2,"
+        SortPath = "0,1,"
     ElseIf Not IsNumeric(ID) Then
         response.Write "<center>暂无相关信息</center>"
         Exit Function
@@ -103,7 +103,7 @@ rs.Open sql, conn, 1, 1
 
 Dim tr, td
 Dim ProductName, SmallPicPath, Content
-Response.Write "<ul class=""cl"">"&vbCrLf
+Response.Write "<ul class=""cpzs"" style=""margin-top:20px;"">"&vbCrLf
 For tr = 1 To 6
 
     For td = 1 To 6
@@ -115,13 +115,17 @@ For tr = 1 To 6
         If ISHTML = 1 Then
             AutoLink = ""&ProName&""&Separated&""&rs("ID")&"."&HTMLName&""
         Else
-            AutoLink = "Case.Asp?ID="&rs("ID")&"&SortID="&rs("sortID")&"&SortPath="&rs("SortPath")&""
+            AutoLink = "product.Asp?ID="&rs("ID")&"&SortID="&rs("sortID")&"&SortPath="&rs("SortPath")&""
         End If
         SmallPicPath = HtmlSmallPic(rs("GroupID"), rs("SmallPic"), rs("Exclusive"))
-        Response.Write "<li><a href="""&AutoLink&""" title="""&rs("ProductName")&""" >"&rs("ProductName")&"</a></li>"&vbCrLf
+		
+		Response.Write "<li><a href="&AutoLink&" title="""&rs("ProductName")&""" ><img src="""&SmallPicPath&""" alt="&rs("ProductName")&" width=""188""></a><a class=""name"" href="&AutoLink&""&request.QueryString("SortID")&">"&ProductName&"</a></li>"
+		
+       
         rs.movenext
+		
         If rs.EOF Then Exit For
-
+		
     Next
 
     If rs.EOF Then Exit For
@@ -225,3 +229,8 @@ rs.Close
 Set rs = Nothing
 End Function
    %>
+
+<script type="text/javascript" src="Scripts/magnifier.js"></script>
+<script type="text/javascript">
+magnifier("mn");
+</script>

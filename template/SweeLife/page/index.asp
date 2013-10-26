@@ -1,13 +1,5 @@
 <!--#include file="../part/header.asp"-->
-<img src="template/SweeLife/image/banner_sweelife.jpg" />
-<a href="aboutus.asp" style="
-text-indent: -999px;
-display: block;
-position: absolute;
-width: 85px;
-height: 29px;
-top: 409px;
-left: 63px;">about us</a>
+<a href="aboutus.asp" style=""><img src="template/SweeLife/image/banner_sweelife.jpg" /></a>
 <script type="text/javascript">
 
 var focus_width=1024;
@@ -227,7 +219,7 @@ scrollPic_01.pageWidth = 99; //翻页宽度
 scrollPic_01.speed = 10; //移动速度(单位毫秒，越小越快)
 scrollPic_01.space = 10; //每次移动像素(单位px，越大越快)
 scrollPic_01.autoPlay = true; //自动播放
-scrollPic_01.autoPlayTime = 3; //自动播放间隔时间(秒)
+scrollPic_01.autoPlayTime = 1; //自动播放间隔时间(秒)
 
 scrollPic_01.initialize(); //初始化
 

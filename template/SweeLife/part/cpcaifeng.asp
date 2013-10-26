@@ -119,7 +119,7 @@ For tr = 1 To 6
         End If
         SmallPicPath = HtmlSmallPic(rs("GroupID"), rs("SmallPic"), rs("Exclusive"))
 		
-		Response.Write "<li><a href="&AutoLink&" title="""&rs("ProductName")&""" ><img src="""&SmallPicPath&""" alt="&rs("ProductName")&" width=""188px"" height=""152""></a><a class=""name"" href="&AutoLink&""&request.QueryString("SortID")&">"&ProductName&"</a></li>"
+		Response.Write "<li><a href="&AutoLink&" title="""&rs("ProductName")&""" ><img src="""&SmallPicPath&""" alt="&rs("ProductName")&" width=""188""></a><a class=""name"" href="&AutoLink&""&request.QueryString("SortID")&">"&ProductName&"</a></li>"
 		
        
         rs.movenext

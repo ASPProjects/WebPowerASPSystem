@@ -51,8 +51,8 @@ height: 305px;
 margin: 8px 1px 1px 20px;
 padding-top: 1px;">
 <p class="title" style=" margin: 30px 1px 1px 16px;">电话</p>
-<p class="phone" style="color:red;">0757-87777777</p>
-<p class="phone" style="color:red;">0757-87777777</p>
+<p class="phone" style="color:red;">0757-82361611</p>
+<p class="phone" style="color:red;">0757-82361611</p>
 <hr style="
 background: 0;
 border: 0;
