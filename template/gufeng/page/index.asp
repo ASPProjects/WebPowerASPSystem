@@ -19,7 +19,7 @@
 <div class="splitline"></div>
 <a class="ol more" href="aboutus.asp">more</a>
 <div id="youku">
-<img src="template/gufeng/image/tmp_youku.jpg"/>
+<embed src="http://player.youku.com/player.php/sid/XNjI2ODUyNjc2/v.swf" allowFullScreen="true" quality="high" width="250" height="200" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
 </div>
 <div class="intro">
 <p>佛山市固峰自动化机械设备厂，是一家专业从事自动化机械研发、设计、生产、销售和服务为一体的企业，为了响应市场的需求，我们研发出了各领域的自动化机械设备，主要包括：全自动攻牙、钻孔、切管、倒角机械，广泛应用于五金加工跟管材加工领域，企业经过长期的努力，已建立了完善的管理体系，拥有一支高素质的研发团队和技术人才，我们立志为广大客户提供先进、实用、稳定的自动化机械设备，目前销量覆盖面广，畅销全国各地，部分已出口至东南亚、非洲及等国家和地区。我们本着&ldquo;以质量求生存，以服务求发展&rdquo;的企业宗旨与广大新老客户紧密合作，携手共进，共创未来。</p>
