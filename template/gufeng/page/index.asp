@@ -13,7 +13,6 @@
 </ul>-->
 <!--#include file="../part/cpgundongcaifeng.asp"-->
 </div>
-<script type="text/javascript">ImgCrops('#ProductsShow')</script>
 <div id="AboutUs">
 <span class="title">关于我们</span>
 <div class="splitline"></div>
@@ -63,6 +62,10 @@
 <li><a href="#"><img src="template/gufeng/image/product_small1.jpg"/><span>钻孔机</span></a> </li>-->
 </ul>
 </div>
+<script type="text/javascript">
+ImgCrops('#ProductsShow');
+ImgCrops('#Strength');
+</script>
 <div id="Success">
 <span class="title">成功案例</span>
 <div class="splitline"></div>
