@@ -17,24 +17,27 @@
 </div>
 <div id="banner" class="cl">
 <script type="text/javascript">
-var imgUrl1="template/gufeng/image/banner_1.jpg";
+var imgUrl1="template/gufeng/image/banner1.jpg";
 var imgtext1="广东佛山市景秀装饰材料有限公司";
 var imgLink1=escape("#");
-var imgUrl2="template/gufeng/image/banner_2.jpg";
+var imgUrl2="template/gufeng/image/banner2.jpg";
 var imgtext2="广东佛山市景秀装饰材料有限公司";
 var imgLink2=escape("#");
-var imgUrl3="template/gufeng/image/banner_3.jpg";
+var imgUrl3="template/gufeng/image/banner3.jpg";
 var imgtext3="广东佛山市景秀装饰材料有限公司";
 var imgLink3=escape("#");
+var imgUrl4="template/gufeng/image/banner4.jpg";
+var imgtext4="广东佛山市景秀装饰材料有限公司";
+var imgLink4=escape("#");
 
 var focus_width=970;
 var focus_height=307;
 var text_height=0;
 var swf_height = focus_height+text_height;
 
-var pics=imgUrl1+"|"+imgUrl2+"|"+imgUrl3;
-var links=imgLink1+"|"+imgLink2+"|"+imgLink3;
-var texts=imgtext1+"|"+imgtext2+"|"+imgtext3;
+var pics=imgUrl1+"|"+imgUrl2+"|"+imgUrl3+"|"+imgUrl4;
+var links=imgLink1+"|"+imgLink2+"|"+imgLink3+"|"+imgLink4;
+var texts=imgtext1+"|"+imgtext2+"|"+imgtext3+"|"+imgtext4;
 var movie = 'template/gufeng/image/focus2.swf';
 var objText =''+
 '<object '+
